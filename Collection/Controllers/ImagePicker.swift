@@ -22,9 +22,9 @@ open class ImagePicker: NSObject {
         super.init()
         self.presentationController = presentationController
         self.delegate = delegate
-        self.pickerController.delegate = self
-        self.pickerController.allowsEditing = true
-        self.pickerController.mediaTypes = ["public.image"]
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        pickerController.mediaTypes = ["public.image"]
     }
     
     private func action(for type: UIImagePickerController.SourceType, title: String) -> UIAlertAction? {
@@ -33,19 +33,19 @@ open class ImagePicker: NSObject {
         }
         return UIAlertAction(title: title, style: .default) { [unowned self] _ in
             self.pickerController.sourceType = type
-            self.presentationController?.present(self.pickerController, animated: true)
+            self.presentationController?.present(pickerController, animated: true)
         }
     }
     
     public func present(from sourceView: UIView) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        if let action = self.action(for: .camera, title: "Сделать фото") {
+        if let action = action(for: .camera, title: "Сделать фото") {
             alertController.addAction(action)
         }
-        if let action = self.action(for: .savedPhotosAlbum, title: "Камера") {
+        if let action = action(for: .savedPhotosAlbum, title: "Камера") {
             alertController.addAction(action)
         }
-        if let action = self.action(for: .photoLibrary, title: "Фото галерея") {
+        if let action = action(for: .photoLibrary, title: "Фото галерея") {
             alertController.addAction(action)
         }
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -54,26 +54,26 @@ open class ImagePicker: NSObject {
             alertController.popoverPresentationController?.sourceRect = sourceView.bounds
             alertController.popoverPresentationController?.permittedArrowDirections = [.down, .up]
         }
-        self.presentationController?.present(alertController, animated: true)
+        presentationController?.present(alertController, animated: true)
     }
     
     private func pickerController(_ controller: UIImagePickerController, didSelect image: UIImage?) {
         controller.dismiss(animated: true, completion: nil)
-        self.delegate?.didSelect(image: image)
+        delegate?.didSelect(image: image)
     }
 }
 
 extension ImagePicker: UIImagePickerControllerDelegate {
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.pickerController(picker, didSelect: nil)
+       pickerController(picker, didSelect: nil)
     }
     
     public func imagePickerController(_ picker: UIImagePickerController,
                                       didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[.editedImage] as? UIImage else {
-            return self.pickerController(picker, didSelect: nil)
+            return pickerController(picker, didSelect: nil)
         }
-        self.pickerController(picker, didSelect: image)
+        pickerController(picker, didSelect: image)
     }
 }
 

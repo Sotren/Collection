@@ -20,7 +20,7 @@ class RecordSpeechViewController: UIViewController {
     var imagePicker: ImagePicker!
     // MARK: - ViewController lifecycle
     override func awakeFromNib() {
-        navigationItem.title = "Запесь текста"
+        navigationItem.title = "Запись текста"
     }
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class RecordSpeechViewController: UIViewController {
         recordButton.isEnabled = false
         speechRecognizer?.delegate = self
         authSpeech()
-        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        imagePicker = ImagePicker(presentationController: self, delegate: self)
     }
     //MARK: - ImagePicker
     @IBAction func showImagePicker(_ sender: UIButton) {

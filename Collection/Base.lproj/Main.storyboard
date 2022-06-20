@@ -48,40 +48,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="How-to-record-a-podcast" translatesAutoresizingMaskIntoConstraints="NO" id="Z4t-s5-EOu">
-                                <rect key="frame" x="44" y="102" width="327" height="144"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="144" id="Q5h-bg-Ijg"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j8y-Md-QRm">
-                                <rect key="frame" x="87" y="281" width="221" height="489.5"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yh0-e4-5Dl">
-                                        <rect key="frame" x="8" y="8" width="205" height="473.5"/>
-                                        <color key="backgroundColor" red="0.77790802719999996" green="0.78200721740000001" blue="0.76653695109999997" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er em odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="Q0r-YS-fQ4"/>
-                                <color key="backgroundColor" red="0.93849742410000003" green="0.94264656309999995" blue="0.9203411937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50U-uu-hIg">
-                                <rect key="frame" x="87" y="762" width="233" height="30"/>
+                                <rect key="frame" x="19" y="615" width="374" height="30"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <state key="normal" title="Запесь">
+                                <state key="normal" title="Запись">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="recordButtonTapped:" destination="PjF-hC-Gja" eventType="touchUpInside" id="2Iz-yR-U6S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIH-QX-h7s">
-                                <rect key="frame" x="120" y="243" width="174" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yh0-e4-5Dl">
+                                <rect key="frame" x="16" y="467" width="380" height="91"/>
+                                <color key="backgroundColor" red="0.77790802719999996" green="0.78200721740000001" blue="0.76653695109999997" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="380" id="DHN-lL-1uZ"/>
+                                    <constraint firstAttribute="height" constant="91" id="gNo-Kf-sW0"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="How-to-record-a-podcast" translatesAutoresizingMaskIntoConstraints="NO" id="Z4t-s5-EOu">
+                                <rect key="frame" x="16" y="104" width="378" height="213"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIH-QX-h7s">
+                                <rect key="frame" x="19" y="367" width="374" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Выбрать изображение">
@@ -95,20 +87,20 @@
                         <viewLayoutGuide key="safeArea" id="yLP-f8-2gl"/>
                         <color key="backgroundColor" red="0.93849742410000003" green="0.94264656309999995" blue="0.9203411937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yLP-f8-2gl" firstAttribute="bottom" secondItem="50U-uu-hIg" secondAttribute="bottom" constant="21" id="3ew-Oq-21T"/>
-                            <constraint firstItem="JIH-QX-h7s" firstAttribute="top" secondItem="yLP-f8-2gl" secondAttribute="top" constant="155" id="4Eg-dy-H1a"/>
-                            <constraint firstItem="yLP-f8-2gl" firstAttribute="trailing" secondItem="j8y-Md-QRm" secondAttribute="trailing" constant="106" id="8Cd-kT-rPY"/>
-                            <constraint firstItem="j8y-Md-QRm" firstAttribute="top" secondItem="JIH-QX-h7s" secondAttribute="bottom" constant="8" symbolic="YES" id="AJI-z0-6tt"/>
-                            <constraint firstItem="j8y-Md-QRm" firstAttribute="top" secondItem="Z4t-s5-EOu" secondAttribute="bottom" constant="35" id="CXV-GX-GuI"/>
-                            <constraint firstItem="50U-uu-hIg" firstAttribute="firstBaseline" secondItem="j8y-Md-QRm" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="Cn2-gJ-9th"/>
-                            <constraint firstItem="yLP-f8-2gl" firstAttribute="trailing" secondItem="JIH-QX-h7s" secondAttribute="trailing" constant="120" id="XaM-1A-0d1"/>
-                            <constraint firstItem="yLP-f8-2gl" firstAttribute="trailing" secondItem="50U-uu-hIg" secondAttribute="trailing" constant="94" id="YTU-oc-lbT"/>
-                            <constraint firstItem="Z4t-s5-EOu" firstAttribute="centerX" secondItem="d9M-vF-WcM" secondAttribute="centerX" id="ZjW-7K-SFs"/>
-                            <constraint firstItem="50U-uu-hIg" firstAttribute="leading" secondItem="j8y-Md-QRm" secondAttribute="leading" id="aie-Hb-LEk"/>
-                            <constraint firstItem="Z4t-s5-EOu" firstAttribute="top" secondItem="yLP-f8-2gl" secondAttribute="top" constant="14" id="bWh-Sd-OQ5"/>
-                            <constraint firstItem="JIH-QX-h7s" firstAttribute="leading" secondItem="yLP-f8-2gl" secondAttribute="leading" constant="120" id="gwW-dh-qAp"/>
-                            <constraint firstItem="j8y-Md-QRm" firstAttribute="leading" secondItem="yLP-f8-2gl" secondAttribute="leading" constant="87" id="oim-52-IXP"/>
-                            <constraint firstItem="Z4t-s5-EOu" firstAttribute="leading" secondItem="yLP-f8-2gl" secondAttribute="leading" constant="44" id="w0r-Z6-n5D"/>
+                            <constraint firstItem="50U-uu-hIg" firstAttribute="top" secondItem="yh0-e4-5Dl" secondAttribute="bottom" constant="57" id="7fp-JO-Mlo"/>
+                            <constraint firstItem="50U-uu-hIg" firstAttribute="trailing" secondItem="JIH-QX-h7s" secondAttribute="trailing" id="8JI-3b-x1B"/>
+                            <constraint firstItem="yLP-f8-2gl" firstAttribute="trailing" secondItem="Z4t-s5-EOu" secondAttribute="trailing" constant="20" id="Bxy-tC-QtC"/>
+                            <constraint firstItem="Z4t-s5-EOu" firstAttribute="leading" secondItem="yLP-f8-2gl" secondAttribute="leading" constant="16" id="Gdd-ug-WDV"/>
+                            <constraint firstItem="yLP-f8-2gl" firstAttribute="trailing" secondItem="JIH-QX-h7s" secondAttribute="trailing" constant="21" id="Hu0-ls-2y0"/>
+                            <constraint firstItem="50U-uu-hIg" firstAttribute="leading" secondItem="JIH-QX-h7s" secondAttribute="leading" id="JLz-1K-BxO"/>
+                            <constraint firstItem="JIH-QX-h7s" firstAttribute="top" secondItem="Z4t-s5-EOu" secondAttribute="bottom" constant="50" id="OtC-ZI-0va"/>
+                            <constraint firstItem="yLP-f8-2gl" firstAttribute="trailing" secondItem="yh0-e4-5Dl" secondAttribute="trailing" constant="18" id="XgM-W1-Ek3"/>
+                            <constraint firstItem="JIH-QX-h7s" firstAttribute="leading" secondItem="yLP-f8-2gl" secondAttribute="leading" constant="19" id="Zf7-yO-WBh"/>
+                            <constraint firstItem="Z4t-s5-EOu" firstAttribute="top" secondItem="yLP-f8-2gl" secondAttribute="top" constant="16" id="flj-zA-qhe"/>
+                            <constraint firstItem="yh0-e4-5Dl" firstAttribute="centerY" secondItem="yLP-f8-2gl" secondAttribute="centerY" constant="62" id="iee-a8-Nqs"/>
+                            <constraint firstItem="yh0-e4-5Dl" firstAttribute="centerX" secondItem="yLP-f8-2gl" secondAttribute="centerX" constant="-1" id="lWU-ff-Zy7"/>
+                            <constraint firstItem="yh0-e4-5Dl" firstAttribute="leading" secondItem="yLP-f8-2gl" secondAttribute="leading" constant="16" id="vJL-Yb-sKc"/>
+                            <constraint firstItem="yh0-e4-5Dl" firstAttribute="top" secondItem="JIH-QX-h7s" secondAttribute="bottom" constant="70" id="wh3-if-E77"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RbN-cc-JEc"/>
@@ -141,11 +133,11 @@
             </objects>
             <point key="canvasLocation" x="314" y="65"/>
         </scene>
-        <!--Запесь текста-->
+        <!--Запись текста-->
         <scene sceneID="EKg-dX-BM3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gek-Qb-ESx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Запесь текста" id="QbC-Qt-pWe"/>
+                    <tabBarItem key="tabBarItem" title="Запись текста" id="QbC-Qt-pWe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g0v-Qe-Zkj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
