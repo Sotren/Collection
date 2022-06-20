@@ -15,50 +15,48 @@ class RecordSpeechViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     var recognitionTask: SFSpeechRecognitionTask?
-    let audioEngene = AVAudioEngine()
+    let audioEngine = AVAudioEngine()
+    // MARK: - ViewController lifecycle
+    override func awakeFromNib() {
+        navigationItem.title = "Запесь текста"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         recordButton.isEnabled = false
         speechRecognizer?.delegate = self
         authSpeech()
-        
-        
     }
     //MARK: - Speech recording
     func authSpeech() {
         SFSpeechRecognizer.requestAuthorization {
             status in
-            var buttonState = false
+            var enableButton = false
             switch status {
             case .authorized:
-                buttonState = true
+                enableButton = true
                 print("Разрешение получено")
             case .denied:
-                buttonState = false
+                enableButton = false
                 print("Пользователь не дал разрешения на использование распознавания речи")
             case .notDetermined:
-                buttonState = false
+                enableButton = false
                 print("Распознавание речи еще не разрешено пользователем")
             case .restricted:
-                buttonState = false
+                enableButton = false
                 print("Распознавание речи не поддерживается на этом устройстве")
             @unknown default:
                 fatalError()
             }
             DispatchQueue.main.async {
-                self.recordButton.isEnabled = buttonState
+                self.recordButton.isEnabled = enableButton
             }
         }
     }
     
-    override func awakeFromNib() {
-        navigationItem.title = "Запесь текста"
-    }
-    
     @IBAction func recordButtonTapped(_ sender: UIButton) {
-        if audioEngene.isRunning {
-            audioEngene.stop()
+        if audioEngine.isRunning {
+            audioEngine.stop()
             recognitionRequest?.endAudio()
             recordButton.isEnabled = false
             recordButton.setTitle("Начать запись", for: .normal)
@@ -66,6 +64,7 @@ class RecordSpeechViewController: UIViewController {
             startRecording()
             recordButton.setTitle("Остановить запись", for: .normal)
         }
+        textView.text = "Запесь идет...."
     }
     
     func startRecording() {
@@ -82,7 +81,7 @@ class RecordSpeechViewController: UIViewController {
             print("Не удалось настроить аудиосессию")
         }
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-        let inputNode = audioEngene.inputNode
+        let inputNode = audioEngine.inputNode
         guard let recognitionRequest = recognitionRequest else {
             fatalError("Не могу создать экземпляр запроса")
         }
@@ -95,7 +94,7 @@ class RecordSpeechViewController: UIViewController {
                 isFinal = (result?.isFinal)!
             }
             if error != nil || isFinal {
-                self.audioEngene.stop()
+                self.audioEngine.stop()
                 inputNode.removeTap(onBus: 0)
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
@@ -107,22 +106,17 @@ class RecordSpeechViewController: UIViewController {
             buffer, _ in
             self.recognitionRequest?.append(buffer)
         }
-        audioEngene.prepare()
+        audioEngine.prepare()
         do {
-            try audioEngene.start()
+            try audioEngine.start()
         } catch {
             print("Не удается стартонуть движок")
         }
-        textView.text = "Запесь идет...."
     }
 }
 //MARK: - Extension SpeechRecognizer
 extension RecordSpeechViewController: SFSpeechRecognizerDelegate {
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
-        if available {
-            recordButton.isEnabled = true
-        } else {
-            recordButton.isEnabled = false
-        }
+        recordButton.isEnabled = available
     }
 }
