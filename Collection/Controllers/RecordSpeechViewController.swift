@@ -35,7 +35,7 @@ class RecordSpeechViewController: UIViewController {
         self.imagePicker.present(from: sender)
     }
     //MARK: - Speech recording
-    private   func authSpeech() {
+    private func authSpeech() {
         SFSpeechRecognizer.requestAuthorization {
             status in
             var enableButton = false
