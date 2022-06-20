@@ -80,24 +80,36 @@
                                     <action selector="recordButtonTapped:" destination="PjF-hC-Gja" eventType="touchUpInside" id="2Iz-yR-U6S"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIH-QX-h7s">
+                                <rect key="frame" x="184" y="243" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showImagePicker:" destination="PjF-hC-Gja" eventType="touchUpInside" id="AFg-vg-qtz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yLP-f8-2gl"/>
                         <color key="backgroundColor" red="0.93849742410000003" green="0.94264656309999995" blue="0.9203411937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yLP-f8-2gl" firstAttribute="bottom" secondItem="50U-uu-hIg" secondAttribute="bottom" constant="21" id="3ew-Oq-21T"/>
+                            <constraint firstItem="JIH-QX-h7s" firstAttribute="top" secondItem="yLP-f8-2gl" secondAttribute="top" constant="155" id="4Eg-dy-H1a"/>
                             <constraint firstItem="yLP-f8-2gl" firstAttribute="trailing" secondItem="j8y-Md-QRm" secondAttribute="trailing" constant="106" id="8Cd-kT-rPY"/>
+                            <constraint firstItem="j8y-Md-QRm" firstAttribute="top" secondItem="JIH-QX-h7s" secondAttribute="bottom" constant="8" symbolic="YES" id="AJI-z0-6tt"/>
                             <constraint firstItem="j8y-Md-QRm" firstAttribute="top" secondItem="Z4t-s5-EOu" secondAttribute="bottom" constant="35" id="CXV-GX-GuI"/>
                             <constraint firstItem="50U-uu-hIg" firstAttribute="firstBaseline" secondItem="j8y-Md-QRm" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="Cn2-gJ-9th"/>
+                            <constraint firstItem="yLP-f8-2gl" firstAttribute="trailing" secondItem="JIH-QX-h7s" secondAttribute="trailing" constant="184" id="XaM-1A-0d1"/>
                             <constraint firstItem="yLP-f8-2gl" firstAttribute="trailing" secondItem="50U-uu-hIg" secondAttribute="trailing" constant="94" id="YTU-oc-lbT"/>
                             <constraint firstItem="Z4t-s5-EOu" firstAttribute="centerX" secondItem="d9M-vF-WcM" secondAttribute="centerX" id="ZjW-7K-SFs"/>
                             <constraint firstItem="50U-uu-hIg" firstAttribute="leading" secondItem="j8y-Md-QRm" secondAttribute="leading" id="aie-Hb-LEk"/>
                             <constraint firstItem="Z4t-s5-EOu" firstAttribute="top" secondItem="yLP-f8-2gl" secondAttribute="top" constant="14" id="bWh-Sd-OQ5"/>
+                            <constraint firstItem="JIH-QX-h7s" firstAttribute="leading" secondItem="yLP-f8-2gl" secondAttribute="leading" constant="184" id="gwW-dh-qAp"/>
                             <constraint firstItem="j8y-Md-QRm" firstAttribute="leading" secondItem="yLP-f8-2gl" secondAttribute="leading" constant="87" id="oim-52-IXP"/>
                             <constraint firstItem="Z4t-s5-EOu" firstAttribute="leading" secondItem="yLP-f8-2gl" secondAttribute="leading" constant="44" id="w0r-Z6-n5D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RbN-cc-JEc"/>
                     <connections>
+                        <outlet property="imageForPicker" destination="Z4t-s5-EOu" id="LZC-m6-gav"/>
                         <outlet property="recordButton" destination="50U-uu-hIg" id="L6k-pz-4Zo"/>
                         <outlet property="textView" destination="yh0-e4-5Dl" id="XGR-cD-kgb"/>
                     </connections>

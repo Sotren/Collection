@@ -13,9 +13,11 @@ class RecordSpeechViewController: UIViewController {
     let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ru"))
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var imageForPicker: UIImageView!
     var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     var recognitionTask: SFSpeechRecognitionTask?
     let audioEngine = AVAudioEngine()
+    var imagePicker: ImagePicker!
     // MARK: - ViewController lifecycle
     override func awakeFromNib() {
         navigationItem.title = "Запесь текста"
@@ -26,9 +28,14 @@ class RecordSpeechViewController: UIViewController {
         recordButton.isEnabled = false
         speechRecognizer?.delegate = self
         authSpeech()
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+    }
+    //MARK: - ImagePicker
+    @IBAction func showImagePicker(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
     }
     //MARK: - Speech recording
-    func authSpeech() {
+    private   func authSpeech() {
         SFSpeechRecognizer.requestAuthorization {
             status in
             var enableButton = false
@@ -67,7 +74,7 @@ class RecordSpeechViewController: UIViewController {
         textView.text = "Запесь идет...."
     }
     
-    func startRecording() {
+    private func startRecording() {
         if recognitionTask != nil {
             recognitionTask?.cancel()
             recognitionTask = nil
@@ -118,5 +125,11 @@ class RecordSpeechViewController: UIViewController {
 extension RecordSpeechViewController: SFSpeechRecognizerDelegate {
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         recordButton.isEnabled = available
+    }
+}
+//MARK: - ImagePikerDelegate
+extension RecordSpeechViewController: ImagePickerDelegate {
+    func didSelect(image: UIImage?) {
+        self.imageForPicker.image = image
     }
 }

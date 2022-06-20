@@ -15,6 +15,7 @@
 		EB544BF3285B43F10033B3C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544BF1285B43F10033B3C3 /* LaunchScreen.storyboard */; };
 		EB544C0C285C5E870033B3C3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C0B285C5E870033B3C3 /* SecondViewController.swift */; };
 		EB544C0F285C5E9C0033B3C3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */; };
+		EB544C1B286062500033B3C3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C1A2860624F0033B3C3 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EB544BF4285B43F10033B3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB544C0B285C5E870033B3C3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		EB544C1A2860624F0033B3C3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */,
+				EB544C1A2860624F0033B3C3 /* ImagePicker.swift */,
 				EB544C0B285C5E870033B3C3 /* SecondViewController.swift */,
 				EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */,
 			);
@@ -154,6 +157,7 @@
 				EB544C0C285C5E870033B3C3 /* SecondViewController.swift in Sources */,
 				EB544BEB285B43EE0033B3C3 /* RecordSpeechViewController.swift in Sources */,
 				EB544C0F285C5E9C0033B3C3 /* ThirdViewController.swift in Sources */,
+				EB544C1B286062500033B3C3 /* ImagePicker.swift in Sources */,
 				EB544BE7285B43EE0033B3C3 /* AppDelegate.swift in Sources */,
 				EB544BE9285B43EE0033B3C3 /* SceneDelegate.swift in Sources */,
 			);
