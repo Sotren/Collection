@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Для использование приложения необходимо предоставить доступ к камере</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Для использование приложения необходимо предоставить доступ к вашей фото галереи</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Для использование приложения необходим микрофон</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Для распознавание речи необходимо ваше согласие</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
