@@ -9,7 +9,7 @@ import Foundation
 import UIKit.UIImage
 
 struct  Entity {
-    let date: Date
-    let time: TimeZone
-    let icon: UIImage
+    let date: String
+    let time: String
+    //let icon: UIImage
 }
