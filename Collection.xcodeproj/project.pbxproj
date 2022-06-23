@@ -24,6 +24,7 @@
 		EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C42286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift */; };
 		EB544C4F2863278B0033B3C3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C4D2863278B0033B3C3 /* CollectionViewCell.swift */; };
 		EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */; };
+		EB544C532864496F0033B3C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C522864496F0033B3C3 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		EB544C42286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabledContentCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		EB544C4D2863278B0033B3C3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		EB544C522864496F0033B3C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */,
 				EB544C1A2860624F0033B3C3 /* ImagePicker.swift */,
 				EB544C0B285C5E870033B3C3 /* SecondViewController.swift */,
+				EB544C522864496F0033B3C3 /* ViewController.swift */,
 				EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */,
 				EB544C46286324F50033B3C3 /* CollectionFlow */,
 				EB544C302861D7A90033B3C3 /* CollectionViewCell */,
@@ -207,6 +210,7 @@
 				EB544C40286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift in Sources */,
 				EB544C0C285C5E870033B3C3 /* SecondViewController.swift in Sources */,
 				EB544C33286323D60033B3C3 /* EntityProvider.swift in Sources */,
+				EB544C532864496F0033B3C3 /* ViewController.swift in Sources */,
 				EB544BEB285B43EE0033B3C3 /* RecordSpeechViewController.swift in Sources */,
 				EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */,
 				EB544C3D286324DF0033B3C3 /* DefaultCollectionViewDelegate.swift in Sources */,
