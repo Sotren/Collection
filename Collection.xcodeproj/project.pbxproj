@@ -25,6 +25,7 @@
 		EB544C4F2863278B0033B3C3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C4D2863278B0033B3C3 /* CollectionViewCell.swift */; };
 		EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */; };
 		EB544C532864496F0033B3C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C522864496F0033B3C3 /* ViewController.swift */; };
+		EB544C662865C39B0033B3C3 /* SelectedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544C642865C39A0033B3C3 /* SelectedView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		EB544C4D2863278B0033B3C3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		EB544C522864496F0033B3C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB544C652865C39A0033B3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Base.lproj/SelectedView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +82,11 @@
 		EB544BE5285B43EE0033B3C3 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */,
-				EB544BE8285B43EE0033B3C3 /* SceneDelegate.swift */,
+				EB544C6E28699EA10033B3C3 /* Resource */,
+				EB544C6B28699E740033B3C3 /* Application */,
 				EB544C2B2861D5E80033B3C3 /* Entities */,
-				EB544C09285C5E650033B3C3 /* Controllers */,
+				EB544C6A28699E610033B3C3 /* Flow */,
 				EB544BEC285B43EE0033B3C3 /* Main.storyboard */,
-				EB544BEF285B43F10033B3C3 /* Assets.xcassets */,
-				EB544BF1285B43F10033B3C3 /* LaunchScreen.storyboard */,
 				EB544BF4285B43F10033B3C3 /* Info.plist */,
 			);
 			path = Collection;
@@ -98,10 +98,7 @@
 				EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */,
 				EB544C1A2860624F0033B3C3 /* ImagePicker.swift */,
 				EB544C0B285C5E870033B3C3 /* SecondViewController.swift */,
-				EB544C522864496F0033B3C3 /* ViewController.swift */,
 				EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */,
-				EB544C46286324F50033B3C3 /* CollectionFlow */,
-				EB544C302861D7A90033B3C3 /* CollectionViewCell */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -133,6 +130,44 @@
 				EB544C3C286324DE0033B3C3 /* DefaultCollectionViewDelegate.swift */,
 			);
 			path = CollectionFlow;
+			sourceTree = "<group>";
+		};
+		EB544C6A28699E610033B3C3 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				EB544C302861D7A90033B3C3 /* CollectionViewCell */,
+				EB544C6F28699F3E0033B3C3 /* SelectedView */,
+				EB544C46286324F50033B3C3 /* CollectionFlow */,
+				EB544C09285C5E650033B3C3 /* Controllers */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		EB544C6B28699E740033B3C3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EB544BE8285B43EE0033B3C3 /* SceneDelegate.swift */,
+				EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EB544C6E28699EA10033B3C3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EB544BEF285B43F10033B3C3 /* Assets.xcassets */,
+				EB544BF1285B43F10033B3C3 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EB544C6F28699F3E0033B3C3 /* SelectedView */ = {
+			isa = PBXGroup;
+			children = (
+				EB544C522864496F0033B3C3 /* ViewController.swift */,
+				EB544C642865C39A0033B3C3 /* SelectedView.storyboard */,
+			);
+			path = SelectedView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +231,7 @@
 				EB544BF0285B43F10033B3C3 /* Assets.xcassets in Resources */,
 				EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */,
 				EB544BEE285B43EE0033B3C3 /* Main.storyboard in Resources */,
+				EB544C662865C39B0033B3C3 /* SelectedView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +276,14 @@
 				EB544BF2285B43F10033B3C3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EB544C642865C39A0033B3C3 /* SelectedView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB544C652865C39A0033B3C3 /* Base */,
+			);
+			name = SelectedView.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

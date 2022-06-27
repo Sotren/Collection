@@ -36,12 +36,6 @@ class SecondViewController: UICollectionViewController  {
             .defaultGrid: DefaultGriddedContentCollectionViewDelegate(),
             .customGrid: CustomGriddedContentCollectionViewDelegate(),
         ]
-        result.values.forEach {
-            $0.didSelectItem = { _ in
-                print("Item selected")
-                // Мб тут как-то сделать 
-            }
-    }
         return result
     }()
     private var datasource: [Entity] = EntityProvider.get()
@@ -80,7 +74,7 @@ class SecondViewController: UICollectionViewController  {
     }
 }
 // MARK: UICollectionViewDataSource & UICollectionViewDelegate
-extension SecondViewController {
+extension SecondViewController{
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return datasource.count
     }
@@ -94,9 +88,6 @@ extension SecondViewController {
         cell.update(title: collection.date)
         return cell
     }
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        pushToSelectedVc(selectedCell: datasource[indexPath.row])
-        
-    }
+    
 }
 

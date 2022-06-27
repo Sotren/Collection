@@ -14,19 +14,16 @@ protocol CollectionViewSelectableItemDelegate: class, UICollectionViewDelegateFl
 class DefaultCollectionViewDelegate: NSObject, CollectionViewSelectableItemDelegate {
     var didSelectItem: ((_ indexPath: IndexPath) -> Void)?
     let sectionInsets = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 20.0, right: 16.0)
+  
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectItem?(indexPath)
+        let storyboard = UIStoryboard(name: "SelectedView", bundle: nil)
+        let test = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc1 = test.instantiateViewController(identifier: "SecondViewControllerID") as? SecondViewController else {
+            return}
+        guard let vc = storyboard.instantiateViewController(identifier: "ViewControllerID") as? ViewController else {
+            return
+        }
+        vc1.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.clear
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.white
-    }
-
 }
