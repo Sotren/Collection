@@ -17,13 +17,34 @@ class DefaultCollectionViewDelegate: NSObject, CollectionViewSelectableItemDeleg
   
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "SelectedView", bundle: nil)
-        let test = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc1 = test.instantiateViewController(identifier: "SecondViewControllerID") as? SecondViewController else {
-            return}
-        guard let vc = storyboard.instantiateViewController(identifier: "ViewControllerID") as? ViewController else {
-            return
+        guard let vc = UIStoryboard(name: "SelectedViewController", bundle: nil).instantiateViewController(identifier: "SelectedViewController") as? SelectedViewController else { return }
+//        let storyboard = UIStoryboard(name: "SelectedView", bundle: nil)
+//        let test = UIStoryboard(name: "Main", bundle: nil)
+//        guard let vc1 = test.instantiateViewController(identifier: "SelectedViewController") as? SelectedViewController else {
+//            return}
+//        guard let vc = storyboard.instantiateViewController(identifier: "ViewControllerID") as? ViewController else {
+//            return
+//        }
+        let topvc = UIApplication.topViewController()
+        topvc?.navigationController?.pushViewController(vc, animated: true)
+        //self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension UIApplication {
+    
+    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
         }
-        vc1.navigationController?.pushViewController(vc, animated: true)
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
     }
 }

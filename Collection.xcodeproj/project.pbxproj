@@ -24,8 +24,8 @@
 		EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C42286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift */; };
 		EB544C4F2863278B0033B3C3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C4D2863278B0033B3C3 /* CollectionViewCell.swift */; };
 		EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */; };
-		EB544C532864496F0033B3C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C522864496F0033B3C3 /* ViewController.swift */; };
-		EB544C662865C39B0033B3C3 /* SelectedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544C642865C39A0033B3C3 /* SelectedView.storyboard */; };
+		EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C522864496F0033B3C3 /* SelectedViewController.swift */; };
+		EB544C662865C39B0033B3C3 /* SelectedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +48,8 @@
 		EB544C42286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabledContentCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		EB544C4D2863278B0033B3C3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
-		EB544C522864496F0033B3C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EB544C652865C39A0033B3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Base.lproj/SelectedView.storyboard; sourceTree = "<group>"; };
+		EB544C522864496F0033B3C3 /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
+		EB544C652865C39A0033B3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Base.lproj/SelectedViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +63,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		848EAAD62869E1A7004E30AE /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */,
+			);
+			path = FirstTab;
+			sourceTree = "<group>";
+		};
+		848EAAD72869E1E0004E30AE /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EB544BEC285B43EE0033B3C3 /* Main.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		848EAAD82869E217004E30AE /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				EB544C1A2860624F0033B3C3 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		848EAAD92869E23A004E30AE /* SelectedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB544C522864496F0033B3C3 /* SelectedViewController.swift */,
+				EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */,
+			);
+			path = SelectedViewController;
+			sourceTree = "<group>";
+		};
 		EB544BDA285B43EE0033B3C3 = {
 			isa = PBXGroup;
 			children = (
@@ -82,25 +115,19 @@
 		EB544BE5285B43EE0033B3C3 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				EB544C6E28699EA10033B3C3 /* Resource */,
 				EB544C6B28699E740033B3C3 /* Application */,
 				EB544C2B2861D5E80033B3C3 /* Entities */,
 				EB544C6A28699E610033B3C3 /* Flow */,
-				EB544BEC285B43EE0033B3C3 /* Main.storyboard */,
-				EB544BF4285B43F10033B3C3 /* Info.plist */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
 		};
-		EB544C09285C5E650033B3C3 /* Controllers */ = {
+		EB544C09285C5E650033B3C3 /* ThirdTab */ = {
 			isa = PBXGroup;
 			children = (
-				EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */,
-				EB544C1A2860624F0033B3C3 /* ImagePicker.swift */,
-				EB544C0B285C5E870033B3C3 /* SecondViewController.swift */,
 				EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */,
 			);
-			path = Controllers;
+			path = ThirdTab;
 			sourceTree = "<group>";
 		};
 		EB544C2B2861D5E80033B3C3 /* Entities */ = {
@@ -135,10 +162,14 @@
 		EB544C6A28699E610033B3C3 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				EB544C302861D7A90033B3C3 /* CollectionViewCell */,
-				EB544C6F28699F3E0033B3C3 /* SelectedView */,
+				848EAAD82869E217004E30AE /* ImagePicker */,
 				EB544C46286324F50033B3C3 /* CollectionFlow */,
-				EB544C09285C5E650033B3C3 /* Controllers */,
+				848EAAD72869E1E0004E30AE /* TabBar */,
+				848EAAD62869E1A7004E30AE /* FirstTab */,
+				EB544C6F28699F3E0033B3C3 /* SecondTab */,
+				848EAAD92869E23A004E30AE /* SelectedViewController */,
+				EB544C09285C5E650033B3C3 /* ThirdTab */,
+				EB544C6E28699EA10033B3C3 /* Resource */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -155,19 +186,20 @@
 		EB544C6E28699EA10033B3C3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				EB544BF4285B43F10033B3C3 /* Info.plist */,
 				EB544BEF285B43F10033B3C3 /* Assets.xcassets */,
 				EB544BF1285B43F10033B3C3 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		EB544C6F28699F3E0033B3C3 /* SelectedView */ = {
+		EB544C6F28699F3E0033B3C3 /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
-				EB544C522864496F0033B3C3 /* ViewController.swift */,
-				EB544C642865C39A0033B3C3 /* SelectedView.storyboard */,
+				EB544C0B285C5E870033B3C3 /* SecondViewController.swift */,
+				EB544C302861D7A90033B3C3 /* CollectionViewCell */,
 			);
-			path = SelectedView;
+			path = SecondTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +263,7 @@
 				EB544BF0285B43F10033B3C3 /* Assets.xcassets in Resources */,
 				EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */,
 				EB544BEE285B43EE0033B3C3 /* Main.storyboard in Resources */,
-				EB544C662865C39B0033B3C3 /* SelectedView.storyboard in Resources */,
+				EB544C662865C39B0033B3C3 /* SelectedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +278,7 @@
 				EB544C40286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift in Sources */,
 				EB544C0C285C5E870033B3C3 /* SecondViewController.swift in Sources */,
 				EB544C33286323D60033B3C3 /* EntityProvider.swift in Sources */,
-				EB544C532864496F0033B3C3 /* ViewController.swift in Sources */,
+				EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */,
 				EB544BEB285B43EE0033B3C3 /* RecordSpeechViewController.swift in Sources */,
 				EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */,
 				EB544C3D286324DF0033B3C3 /* DefaultCollectionViewDelegate.swift in Sources */,
@@ -278,12 +310,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		EB544C642865C39A0033B3C3 /* SelectedView.storyboard */ = {
+		EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EB544C652865C39A0033B3C3 /* Base */,
 			);
-			name = SelectedView.storyboard;
+			name = SelectedViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

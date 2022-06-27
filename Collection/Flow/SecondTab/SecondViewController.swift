@@ -64,17 +64,17 @@ class SecondViewController: UICollectionViewController  {
         selectedStyle = allCases[nextIndex]
     }
     
-    private func pushToSelectedVc(selectedCell: Entity) {
-        let storyboard = UIStoryboard(name: "ViewController", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(identifier: "ViewControllerID") as? ViewController else {
-            return
-        }
-        vc.dataFromCell = selectedCell
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    private func pushToSelectedVc(selectedCell: Entity) {
+//        let storyboard = UIStoryboard(name: "ViewController", bundle: nil)
+//        guard let vc = storyboard.instantiateViewController(identifier: "ViewControllerID") as? ViewController else {
+//            return
+//        }
+//        vc.dataFromCell = selectedCell
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
 }
 // MARK: UICollectionViewDataSource & UICollectionViewDelegate
-extension SecondViewController{
+extension SecondViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return datasource.count
     }

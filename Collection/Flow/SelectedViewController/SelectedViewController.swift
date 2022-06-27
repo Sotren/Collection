@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SelectedViewController: UIViewController {
 
     @IBOutlet weak var dataLabel: UILabel!
     var dataFromCell: Entity!
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataLabel.text = dataFromCell.date
+        //dataLabel.text = dataFromCell.date
     
     }
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="35F-Y6-ILr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="35F-Y6-ILr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -140,6 +141,7 @@
         <!--Red-->
         <scene sceneID="7pR-Pb-FSC">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hi0-h4-nz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wUE-IL-HSc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Red" id="iUI-Ms-kFT"/>
                     <toolbarItems/>
@@ -152,9 +154,8 @@
                         <segue destination="Kqf-UU-kiG" kind="relationship" relationship="rootViewController" id="5TE-A6-M1v"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hi0-h4-nz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="799"/>
+            <point key="canvasLocation" x="1081" y="893"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="Guh-QU-7mW">
@@ -178,9 +179,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
-                                <connections>
-                                    <segue destination="ZDf-Vl-Bcz" kind="show" id="dEX-MH-fWz"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -192,7 +190,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9d-LC-SL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1991" y="797"/>
+            <point key="canvasLocation" x="1893" y="893"/>
         </scene>
         <!--Blue-->
         <scene sceneID="hjw-HN-Gjd">
@@ -212,16 +210,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mf2-cO-5ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3703" y="797"/>
-        </scene>
-        <!--ViewControllerID-->
-        <scene sceneID="6qx-rT-sfK">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ViewControllerID" storyboardName="SelectedView" referencedIdentifier="ViewControllerID" id="ZDf-Vl-Bcz" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="9Js-Tc-lT8"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oi8-p4-Bpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2823" y="797"/>
         </scene>
     </scenes>
     <resources>
