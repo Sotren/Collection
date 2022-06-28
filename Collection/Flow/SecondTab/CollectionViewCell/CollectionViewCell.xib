@@ -23,7 +23,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nD7-Or-jvS">
                                 <rect key="frame" x="0.0" y="8" width="381.5" height="266.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-KO-4JR">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-KO-4JR">
                                         <rect key="frame" x="0.0" y="0.0" width="266.5" height="266.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -58,10 +58,10 @@
             </constraints>
             <size key="customSize" width="503" height="283"/>
             <connections>
-                <outlet property="dataLabel" destination="mQF-ke-Ya7" id="qOH-Xr-dY1"/>
                 <outlet property="dateLabel" destination="LrC-jB-JbW" id="gXb-eC-GrY"/>
                 <outlet property="imageIcon" destination="5tr-KO-4JR" id="mbu-7o-YUf"/>
                 <outlet property="stackView" destination="nD7-Or-jvS" id="qJ0-o7-put"/>
+                <outlet property="timeLabel" destination="mQF-ke-Ya7" id="qOH-Xr-dY1"/>
             </connections>
             <point key="canvasLocation" x="73.188405797101453" y="202.56696428571428"/>
         </collectionViewCell>

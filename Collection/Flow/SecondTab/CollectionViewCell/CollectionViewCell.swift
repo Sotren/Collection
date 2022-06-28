@@ -13,7 +13,7 @@ class CollectionViewCell: UICollectionViewCell {
     static let nib = UINib(nibName: String(describing:  CollectionViewCell.self), bundle: nil)
     @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var imageIcon: UIImageView!
-    @IBOutlet private weak var dataLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
@@ -21,7 +21,7 @@ class CollectionViewCell: UICollectionViewCell {
         backgroundColor = .white
         clipsToBounds = true
         layer.cornerRadius = 4
-        dataLabel.font = UIFont.systemFont(ofSize: 18)
+        timeLabel.font = UIFont.systemFont(ofSize: 18)
     }
     
     override func layoutSubviews() {
@@ -29,11 +29,31 @@ class CollectionViewCell: UICollectionViewCell {
         updateContentStyle()
     }
     
-    func update(title: String) {
-        //imageIcon.image = image
-        dataLabel.text = title
+    func dateFormatter(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        dateFormatter.dateFormat = "dd-MMMM-YYYY"
+        let stringDate = dateFormatter.string(from: Date())
+        return stringDate
     }
-    
+    func timeFormatter(time: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        dateFormatter.dateFormat = "HH:mm"
+        let stringDate = dateFormatter.string(from: Date())
+        return stringDate
+        
+    }
+    func update(time: String,image: UIImage,date: String) {
+        imageIcon.image = image
+        timeLabel.text = timeFormatter(time: time)
+        dateLabel.text = dateFormatter(date: date)
+    }
+    func test (entity : Entity) {
+        imageIcon.image = entity.icon
+        timeLabel.text = timeFormatter(time: entity.time)
+        dateLabel.text = dateFormatter(date: entity.date)
+    }
     private func updateContentStyle() {
         let isHorizontalStyle = bounds.width > 2 * bounds.height
         let oldAxis = stackView.axis
@@ -42,11 +62,11 @@ class CollectionViewCell: UICollectionViewCell {
         
         stackView.axis = newAxis
         stackView.spacing = isHorizontalStyle ? 16 : 4
-        dataLabel.textAlignment = isHorizontalStyle ? .left : .center
+        timeLabel.textAlignment = isHorizontalStyle ? .left : .center
         let fontTransform: CGAffineTransform = isHorizontalStyle ? .identity : CGAffineTransform(scaleX: 0.8, y: 0.8)
         
         UIView.animate(withDuration: 0.3) {
-            self.dataLabel.transform = fontTransform
+            self.timeLabel.transform = fontTransform
             self.layoutIfNeeded()
         }
     }

@@ -11,5 +11,5 @@ import UIKit.UIImage
 struct  Entity {
     let date: String
     let time: String
-    //let icon: UIImage
+    let icon: UIImage
 }

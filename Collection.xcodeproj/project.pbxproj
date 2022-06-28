@@ -26,6 +26,9 @@
 		EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */; };
 		EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C522864496F0033B3C3 /* SelectedViewController.swift */; };
 		EB544C662865C39B0033B3C3 /* SelectedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */; };
+		EBBB00DE286B0C5C0099D2B0 /* RecordSpeech.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */; };
+		EBBB00E2286B0C9D0099D2B0 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */; };
+		EBBB00E5286B0CD40099D2B0 /* ThirdTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		EB544C522864496F0033B3C3 /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
 		EB544C652865C39A0033B3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Base.lproj/SelectedViewController.storyboard; sourceTree = "<group>"; };
+		EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordSpeech.storyboard; sourceTree = SOURCE_ROOT; };
+		EBBB00E1286B0C9D0099D2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Flow/TabBar/Base.lproj/CollectionView.storyboard; sourceTree = SOURCE_ROOT; };
+		EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdTab.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		848EAAD62869E1A7004E30AE /* FirstTab */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */,
 				EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */,
 			);
 			path = FirstTab;
@@ -125,6 +132,7 @@
 		EB544C09285C5E650033B3C3 /* ThirdTab */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */,
 				EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */,
 			);
 			path = ThirdTab;
@@ -196,6 +204,7 @@
 		EB544C6F28699F3E0033B3C3 /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */,
 				EB544C0B285C5E870033B3C3 /* SecondViewController.swift */,
 				EB544C302861D7A90033B3C3 /* CollectionViewCell */,
 			);
@@ -262,7 +271,10 @@
 				EB544BF3285B43F10033B3C3 /* LaunchScreen.storyboard in Resources */,
 				EB544BF0285B43F10033B3C3 /* Assets.xcassets in Resources */,
 				EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */,
+				EBBB00DE286B0C5C0099D2B0 /* RecordSpeech.storyboard in Resources */,
+				EBBB00E5286B0CD40099D2B0 /* ThirdTab.storyboard in Resources */,
 				EB544BEE285B43EE0033B3C3 /* Main.storyboard in Resources */,
+				EBBB00E2286B0C9D0099D2B0 /* CollectionView.storyboard in Resources */,
 				EB544C662865C39B0033B3C3 /* SelectedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +328,14 @@
 				EB544C652865C39A0033B3C3 /* Base */,
 			);
 			name = SelectedViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBBB00E1286B0C9D0099D2B0 /* Base */,
+			);
+			name = CollectionView.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -444,7 +464,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJG6Q8EU45;
-				INFOPLIST_FILE = Collection/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Collection/Flow/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +483,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJG6Q8EU45;
-				INFOPLIST_FILE = Collection/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Collection/Flow/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

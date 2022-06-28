@@ -12,7 +12,7 @@ class SecondViewController: UICollectionViewController  {
     override func awakeFromNib() {
         navigationItem.title = "Red"
     }
-
+    
     private enum PresentationStyle: String, CaseIterable {
         case table
         case defaultGrid
@@ -38,7 +38,7 @@ class SecondViewController: UICollectionViewController  {
         ]
         return result
     }()
-    private var datasource: [Entity] = EntityProvider.get()
+    var  datasource: [Entity] = EntityProvider.get()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,15 +63,6 @@ class SecondViewController: UICollectionViewController  {
         let nextIndex = (index + 1) % allCases.count
         selectedStyle = allCases[nextIndex]
     }
-    
-//    private func pushToSelectedVc(selectedCell: Entity) {
-//        let storyboard = UIStoryboard(name: "ViewController", bundle: nil)
-//        guard let vc = storyboard.instantiateViewController(identifier: "ViewControllerID") as? ViewController else {
-//            return
-//        }
-//        vc.dataFromCell = selectedCell
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
 }
 // MARK: UICollectionViewDataSource & UICollectionViewDelegate
 extension SecondViewController {
@@ -85,7 +76,7 @@ extension SecondViewController {
             fatalError("Wrong cell")
         }
         let collection = datasource[indexPath.item]
-        cell.update(title: collection.date)
+        cell.update(time: collection.time, image: collection.icon, date: collection.date)
         return cell
     }
     

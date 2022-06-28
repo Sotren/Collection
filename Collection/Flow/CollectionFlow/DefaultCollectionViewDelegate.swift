@@ -18,16 +18,10 @@ class DefaultCollectionViewDelegate: NSObject, CollectionViewSelectableItemDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let vc = UIStoryboard(name: "SelectedViewController", bundle: nil).instantiateViewController(identifier: "SelectedViewController") as? SelectedViewController else { return }
-//        let storyboard = UIStoryboard(name: "SelectedView", bundle: nil)
-//        let test = UIStoryboard(name: "Main", bundle: nil)
-//        guard let vc1 = test.instantiateViewController(identifier: "SelectedViewController") as? SelectedViewController else {
-//            return}
-//        guard let vc = storyboard.instantiateViewController(identifier: "ViewControllerID") as? ViewController else {
-//            return
-//        }
         let topvc = UIApplication.topViewController()
+        let secondVcData = SecondViewController()
+        vc.dataFromCell = secondVcData.datasource[indexPath.row]
         topvc?.navigationController?.pushViewController(vc, animated: true)
-        //self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
