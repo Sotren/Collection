@@ -3,9 +3,27 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Third View Controller-->
+        <scene sceneID="szF-un-kRX">
+            <objects>
+                <viewController id="dFR-w3-73E" customClass="ThirdViewController" customModule="Collection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tak-Ca-P55">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xCD-6o-oxx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I24-O9-0T3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGu-4l-SxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4423" y="799"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xqs-hw-YSi">
             <objects>
@@ -61,7 +79,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hi0-h4-nz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="800"/>
+            <point key="canvasLocation" x="1081" y="893"/>
         </scene>
         <!--Blue-->
         <scene sceneID="hjw-HN-Gjd">
@@ -75,12 +93,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="1ab-Ca-R8g" kind="relationship" relationship="rootViewController" id="9As-Va-iOc"/>
+                        <segue destination="dFR-w3-73E" kind="relationship" relationship="rootViewController" id="9As-Va-iOc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mf2-cO-5ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399" y="800"/>
+            <point key="canvasLocation" x="3703" y="797"/>
         </scene>
         <!--RecordSpeech-->
         <scene sceneID="C4R-xB-Nvo">
@@ -90,7 +108,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTa-PN-mWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-336" y="800"/>
+            <point key="canvasLocation" x="-2.8985507246376816" y="799.55357142857144"/>
         </scene>
         <!--SecondViewControllerID-->
         <scene sceneID="brm-OU-1ZE">
@@ -100,17 +118,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOz-o9-ac4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="800"/>
-        </scene>
-        <!--ThirdTab-->
-        <scene sceneID="X4A-bp-D9b">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ThirdTab" id="1ab-Ca-R8g" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="f4N-9R-mf8"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FgQ-sq-hyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1991" y="800"/>
+            <point key="canvasLocation" x="1893" y="893"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
