@@ -8,17 +8,21 @@
 import Foundation
 
 struct EntityProvider {
- 
-    static func get() -> [Entity] {
+    
+    func get() -> [Entity] {
+        let date = "".dateFormatter()
+        let time = "".timeFormatter()
         return [
-            Entity(date: "28-июня-2022", time: "19:50" ,icon:#imageLiteral(resourceName: "Mishka_main_logo.png.300x200_q85") ),
-            Entity(date: "28-июня-2022", time: "19:50" ,icon:#imageLiteral(resourceName: "default_grid") ),
-            Entity(date: "28-июня-2022", time: "19:50" ,icon:#imageLiteral(resourceName: "Mishka_main_logo.png.300x200_q85") ),
-            Entity(date: "28-июня-2022", time: "19:50" ,icon:#imageLiteral(resourceName: "Mishka_main_logo.png.300x200_q85") ),
-            Entity(date: "28-июня-2022", time: "19:50" ,icon:#imageLiteral(resourceName: "Mishka_main_logo.png.300x200_q85") ),
-            Entity(date: "28-июня-2022", time: "19:50" ,icon:#imageLiteral(resourceName: "Mishka_main_logo.png.300x200_q85") ),
-            Entity(date: "28-июня-2022", time: "19:50" ,icon:#imageLiteral(resourceName: "Mishka_main_logo.png.300x200_q85") ),
-            Entity(date: "test", time: "test" ,icon:#imageLiteral(resourceName: "default_grid") ),
+            Entity(date: date,time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: date,time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
         ]
     }
 }

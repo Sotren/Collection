@@ -14,7 +14,7 @@ protocol CollectionViewSelectableItemDelegate: class, UICollectionViewDelegateFl
 class DefaultCollectionViewDelegate: NSObject, CollectionViewSelectableItemDelegate {
     var didSelectItem: ((_ indexPath: IndexPath) -> Void)?
     let sectionInsets = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 20.0, right: 16.0)
-  
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let vc = UIStoryboard(name: "SelectedViewController", bundle: nil).instantiateViewController(identifier: "SelectedViewController") as? SelectedViewController else { return }

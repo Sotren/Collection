@@ -10,14 +10,13 @@ import UIKit
 class SecondViewController: UICollectionViewController  {
     
     override func awakeFromNib() {
-        navigationItem.title = "Red"
+        navigationItem.title = "Collection"
     }
     
     private enum PresentationStyle: String, CaseIterable {
         case table
         case defaultGrid
         case customGrid
-        
         var buttonImage: UIImage {
             switch self {
             case .table: return #imageLiteral(resourceName: "table")
@@ -38,7 +37,7 @@ class SecondViewController: UICollectionViewController  {
         ]
         return result
     }()
-    var  datasource: [Entity] = EntityProvider.get()
+    var datasource: [Entity] = EntityProvider().get()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +78,4 @@ extension SecondViewController {
         cell.update(time: collection.time, image: collection.icon, date: collection.date)
         return cell
     }
-    
 }
-

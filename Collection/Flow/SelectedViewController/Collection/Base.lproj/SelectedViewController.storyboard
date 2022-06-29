@@ -48,7 +48,7 @@
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="1XI-4J-pyg" firstAttribute="height" secondItem="oHa-5n-4w5" secondAttribute="height" multiplier="0.4" id="cdn-mD-9Kk"/>
+                                    <constraint firstItem="7c2-td-kQo" firstAttribute="width" secondItem="oHa-5n-4w5" secondAttribute="height" multiplier="153:250" id="JoB-rF-n8A"/>
                                 </constraints>
                             </stackView>
                         </subviews>
