@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit.UIImage
-struct  Entity {
+
+struct Entity {
     let date: String
     let time: String
     let icon: UIImage
