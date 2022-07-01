@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UICollectionViewController  {
+class SecondViewController: UICollectionViewController {
     
     override func awakeFromNib() {
         navigationItem.title = "Collection"
@@ -27,7 +27,9 @@ class SecondViewController: UICollectionViewController  {
     }
     
     private var selectedStyle: PresentationStyle = .table {
-        didSet { updatePresentationStyle() }
+        didSet {
+            updatePresentationStyle()
+        }
     }
     private var styleDelegates: [PresentationStyle: CollectionViewSelectableItemDelegate] = {
         let result: [PresentationStyle: CollectionViewSelectableItemDelegate] = [
@@ -37,7 +39,7 @@ class SecondViewController: UICollectionViewController  {
         ]
         return result
     }()
-    var datasource: [Entity] = EntityProvider().get()
+    var datasource: [Entity] = EntityProvider.get()
     
     override func viewDidLoad() {
         super.viewDidLoad()

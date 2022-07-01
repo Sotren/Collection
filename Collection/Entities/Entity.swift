@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit.UIImage
-
 struct  Entity {
     let date: String
     let time: String

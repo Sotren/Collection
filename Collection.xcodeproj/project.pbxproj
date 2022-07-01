@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB408108286C9EC800A37CFE /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408107286C9EC800A37CFE /* Extension+String.swift */; };
+		EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408114286EE1BC00A37CFE /* Application+Extension.swift */; };
+		EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408117286EE64400A37CFE /* DateTimeHelper.swift */; };
 		EB544BE7285B43EE0033B3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */; };
 		EB544BE9285B43EE0033B3C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544BE8285B43EE0033B3C3 /* SceneDelegate.swift */; };
 		EB544BEB285B43EE0033B3C3 /* RecordSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */; };
@@ -33,7 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EB408107286C9EC800A37CFE /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		EB408114286EE1BC00A37CFE /* Application+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Extension.swift"; sourceTree = "<group>"; };
+		EB408117286EE64400A37CFE /* DateTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeHelper.swift; sourceTree = "<group>"; };
 		EB544BE3285B43EE0033B3C3 /* Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB544BE8285B43EE0033B3C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,12 +107,20 @@
 			path = SelectedViewController;
 			sourceTree = "<group>";
 		};
-		EB40810B286C9ED200A37CFE /* Extension+String */ = {
+		EB40810B286C9ED200A37CFE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				EB408107286C9EC800A37CFE /* Extension+String.swift */,
+				EB408114286EE1BC00A37CFE /* Application+Extension.swift */,
 			);
-			path = "Extension+String";
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EB40811A286EEFBD00A37CFE /* DateTimeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EB408117286EE64400A37CFE /* DateTimeHelper.swift */,
+			);
+			path = DateTimeHelper;
 			sourceTree = "<group>";
 		};
 		EB544BDA285B43EE0033B3C3 = {
@@ -134,7 +144,7 @@
 			children = (
 				EB544C6B28699E740033B3C3 /* Application */,
 				EB544C2B2861D5E80033B3C3 /* Entities */,
-				EB40810B286C9ED200A37CFE /* Extension+String */,
+				EB40810B286C9ED200A37CFE /* Extension */,
 				EB544C6A28699E610033B3C3 /* Flow */,
 				EB544C6E28699EA10033B3C3 /* Resource */,
 			);
@@ -182,6 +192,7 @@
 		EB544C6A28699E610033B3C3 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				EB40811A286EEFBD00A37CFE /* DateTimeHelper */,
 				848EAAD82869E217004E30AE /* ImagePicker */,
 				EB544C46286324F50033B3C3 /* CollectionFlow */,
 				848EAAD72869E1E0004E30AE /* TabBar */,
@@ -299,10 +310,11 @@
 			files = (
 				EB544C3A286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift in Sources */,
 				EB544C40286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift in Sources */,
+				EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */,
+				EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */,
 				EB544C0C285C5E870033B3C3 /* SecondViewController.swift in Sources */,
 				EB544C33286323D60033B3C3 /* EntityProvider.swift in Sources */,
 				EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */,
-				EB408108286C9EC800A37CFE /* Extension+String.swift in Sources */,
 				EB544BEB285B43EE0033B3C3 /* RecordSpeechViewController.swift in Sources */,
 				EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */,
 				EB544C3D286324DF0033B3C3 /* DefaultCollectionViewDelegate.swift in Sources */,

@@ -7,22 +7,21 @@
 
 import Foundation
 
-struct EntityProvider {
-    
-    func get() -> [Entity] {
-        let date = "".dateFormatter()
-        let time = "".timeFormatter()
+class EntityProvider {
+
+    static func get() -> [Entity] {
+        let dataTimeHelper = DateTimeHelper()
         return [
-            Entity(date: date,time: time ,icon:#imageLiteral(resourceName: "apple") ),
-            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
-            Entity(date: date,time: time ,icon:#imageLiteral(resourceName: "apple") ),
-            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
-            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
-            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
-            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
-            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
-            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
-            Entity(date: date, time: time ,icon:#imageLiteral(resourceName: "apple") ),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "banana")),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "grapes")),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "apple")),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "banana")),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "grapes")),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "apple")),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "pears")),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "apple")),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "banana")),
+            Entity(date: dataTimeHelper.dateString() , time: dataTimeHelper.timeFormatter() ,icon: #imageLiteral(resourceName: "pears")),
         ]
     }
 }
