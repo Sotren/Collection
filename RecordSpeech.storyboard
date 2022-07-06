@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PjF-hC-Gja">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -7,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Record Speech View Controller-->
+        <!--Title-->
         <scene sceneID="Huj-ge-ZiG">
             <objects>
                 <viewController id="PjF-hC-Gja" customClass="RecordSpeechViewController" customModule="Collection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d9M-vF-WcM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50U-uu-hIg">
-                                <rect key="frame" x="19" y="615" width="374" height="30"/>
+                                <rect key="frame" x="19" y="617.5" width="374" height="30"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Запись">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -26,7 +27,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yh0-e4-5Dl">
-                                <rect key="frame" x="16" y="467" width="380" height="91"/>
+                                <rect key="frame" x="16" y="469.5" width="380" height="91"/>
                                 <color key="backgroundColor" red="0.77790802719999996" green="0.78200721740000001" blue="0.76653695109999997" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="380" id="DHN-lL-1uZ"/>
@@ -37,10 +38,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="How-to-record-a-podcast" translatesAutoresizingMaskIntoConstraints="NO" id="Z4t-s5-EOu">
-                                <rect key="frame" x="16" y="104" width="378" height="213"/>
+                                <rect key="frame" x="16" y="60" width="378" height="259.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIH-QX-h7s">
-                                <rect key="frame" x="19" y="367" width="374" height="30"/>
+                                <rect key="frame" x="19" y="369.5" width="374" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Выбрать изображение">
@@ -70,7 +71,7 @@
                             <constraint firstItem="yh0-e4-5Dl" firstAttribute="top" secondItem="JIH-QX-h7s" secondAttribute="bottom" constant="70" id="wh3-if-E77"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RbN-cc-JEc"/>
+                    <navigationItem key="navigationItem" title="Title" id="0AX-UN-508"/>
                     <connections>
                         <outlet property="imageForPicker" destination="Z4t-s5-EOu" id="LZC-m6-gav"/>
                         <outlet property="recordButton" destination="50U-uu-hIg" id="L6k-pz-4Zo"/>

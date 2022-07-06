@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SecondViewController: UICollectionViewController {
     
@@ -39,7 +40,7 @@ class SecondViewController: UICollectionViewController {
         ]
         return result
     }()
-    var datasource: [Entity] = EntityProvider.get()
+    var datasource = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +78,7 @@ extension SecondViewController {
             fatalError("Wrong cell")
         }
         let collection = datasource[indexPath.item]
-        cell.update(time: collection.time, image: collection.icon, date: collection.date)
+        cell.update(time: collection.time!, image: collection.image!, date: collection.date!)
         return cell
     }
 }

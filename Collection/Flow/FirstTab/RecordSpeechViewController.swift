@@ -18,6 +18,26 @@ class RecordSpeechViewController: UIViewController {
     var recognitionTask: SFSpeechRecognitionTask?
     let audioEngine = AVAudioEngine()
     var imagePicker: ImagePicker!
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let dataTimeSetUp = DateTimeHelper()
+    
+    func setUpSave () {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTapped))
+    }
+    @objc func saveTapped () {
+        let newItem = Item(context: context)
+        newItem.date = dataTimeSetUp.dateString()
+        let imageData = imageForPicker.image!.pngData()
+        newItem.image = imageData
+        newItem.time = dataTimeSetUp.timeFormatter()
+        newItem.text = textView.text
+        do {
+            try context.save()
+        }
+        catch {
+            print("Save error \(error)")
+        }
+    }
     // MARK: - ViewController lifecycle
     override func awakeFromNib() {
         navigationItem.title = "Запись текста"
@@ -28,7 +48,9 @@ class RecordSpeechViewController: UIViewController {
         recordButton.isEnabled = false
         speechRecognizer?.delegate = self
         authSpeech()
+        print()
         imagePicker = ImagePicker(presentationController: self, delegate: self)
+        setUpSave()
     }
     //MARK: - ImagePicker
     @IBAction func showImagePicker(_ sender: UIButton) {
