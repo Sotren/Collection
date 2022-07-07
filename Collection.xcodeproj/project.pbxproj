@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408114286EE1BC00A37CFE /* Application+Extension.swift */; };
+		EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408117286EE64400A37CFE /* DateTimeHelper.swift */; };
 		EB544BE7285B43EE0033B3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */; };
 		EB544BE9285B43EE0033B3C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544BE8285B43EE0033B3C3 /* SceneDelegate.swift */; };
 		EB544BEB285B43EE0033B3C3 /* RecordSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */; };
@@ -16,9 +18,24 @@
 		EB544C0C285C5E870033B3C3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C0B285C5E870033B3C3 /* SecondViewController.swift */; };
 		EB544C0F285C5E9C0033B3C3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */; };
 		EB544C1B286062500033B3C3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C1A2860624F0033B3C3 /* ImagePicker.swift */; };
+		EB544C292861D5DF0033B3C3 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C282861D5DF0033B3C3 /* Entity.swift */; };
+		EB544C33286323D60033B3C3 /* EntityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C32286323D60033B3C3 /* EntityProvider.swift */; };
+		EB544C3A286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C39286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift */; };
+		EB544C3D286324DF0033B3C3 /* DefaultCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C3C286324DE0033B3C3 /* DefaultCollectionViewDelegate.swift */; };
+		EB544C40286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C3F286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift */; };
+		EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C42286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift */; };
+		EB544C4F2863278B0033B3C3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C4D2863278B0033B3C3 /* CollectionViewCell.swift */; };
+		EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */; };
+		EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C522864496F0033B3C3 /* SelectedViewController.swift */; };
+		EB544C662865C39B0033B3C3 /* SelectedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */; };
+		EBBB00DE286B0C5C0099D2B0 /* RecordSpeech.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */; };
+		EBBB00E2286B0C9D0099D2B0 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */; };
+		EBBB00E5286B0CD40099D2B0 /* ThirdTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB408114286EE1BC00A37CFE /* Application+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Extension.swift"; sourceTree = "<group>"; };
+		EB408117286EE64400A37CFE /* DateTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeHelper.swift; sourceTree = "<group>"; };
 		EB544BE3285B43EE0033B3C3 /* Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB544BE8285B43EE0033B3C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +47,19 @@
 		EB544C0B285C5E870033B3C3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		EB544C1A2860624F0033B3C3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EB544C282861D5DF0033B3C3 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		EB544C32286323D60033B3C3 /* EntityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityProvider.swift; sourceTree = "<group>"; };
+		EB544C39286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGriddedContentCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		EB544C3C286324DE0033B3C3 /* DefaultCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		EB544C3F286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultGriddedContentCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		EB544C42286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabledContentCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		EB544C4D2863278B0033B3C3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		EB544C522864496F0033B3C3 /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
+		EB544C652865C39A0033B3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Base.lproj/SelectedViewController.storyboard; sourceTree = "<group>"; };
+		EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordSpeech.storyboard; sourceTree = SOURCE_ROOT; };
+		EBBB00E1286B0C9D0099D2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Flow/TabBar/Base.lproj/CollectionView.storyboard; sourceTree = SOURCE_ROOT; };
+		EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdTab.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +73,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		848EAAD62869E1A7004E30AE /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */,
+				EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */,
+			);
+			path = FirstTab;
+			sourceTree = "<group>";
+		};
+		848EAAD72869E1E0004E30AE /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EB544BEC285B43EE0033B3C3 /* Main.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		848EAAD82869E217004E30AE /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				EB544C1A2860624F0033B3C3 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		848EAAD92869E23A004E30AE /* SelectedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB544C522864496F0033B3C3 /* SelectedViewController.swift */,
+				EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */,
+			);
+			path = SelectedViewController;
+			sourceTree = "<group>";
+		};
+		EB40810B286C9ED200A37CFE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EB408114286EE1BC00A37CFE /* Application+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EB40811A286EEFBD00A37CFE /* DateTimeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EB408117286EE64400A37CFE /* DateTimeHelper.swift */,
+			);
+			path = DateTimeHelper;
+			sourceTree = "<group>";
+		};
 		EB544BDA285B43EE0033B3C3 = {
 			isa = PBXGroup;
 			children = (
@@ -62,26 +142,95 @@
 		EB544BE5285B43EE0033B3C3 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */,
-				EB544BE8285B43EE0033B3C3 /* SceneDelegate.swift */,
-				EB544C09285C5E650033B3C3 /* Controllers */,
-				EB544BEC285B43EE0033B3C3 /* Main.storyboard */,
-				EB544BEF285B43F10033B3C3 /* Assets.xcassets */,
-				EB544BF1285B43F10033B3C3 /* LaunchScreen.storyboard */,
-				EB544BF4285B43F10033B3C3 /* Info.plist */,
+				EB544C6B28699E740033B3C3 /* Application */,
+				EB544C2B2861D5E80033B3C3 /* Entities */,
+				EB40810B286C9ED200A37CFE /* Extension */,
+				EB544C6A28699E610033B3C3 /* Flow */,
+				EB544C6E28699EA10033B3C3 /* Resource */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
 		};
-		EB544C09285C5E650033B3C3 /* Controllers */ = {
+		EB544C09285C5E650033B3C3 /* ThirdTab */ = {
 			isa = PBXGroup;
 			children = (
-				EB544BEA285B43EE0033B3C3 /* RecordSpeechViewController.swift */,
-				EB544C1A2860624F0033B3C3 /* ImagePicker.swift */,
-				EB544C0B285C5E870033B3C3 /* SecondViewController.swift */,
+				EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */,
 				EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */,
 			);
-			path = Controllers;
+			path = ThirdTab;
+			sourceTree = "<group>";
+		};
+		EB544C2B2861D5E80033B3C3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EB544C282861D5DF0033B3C3 /* Entity.swift */,
+				EB544C32286323D60033B3C3 /* EntityProvider.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EB544C302861D7A90033B3C3 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EB544C4D2863278B0033B3C3 /* CollectionViewCell.swift */,
+				EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		EB544C46286324F50033B3C3 /* CollectionFlow */ = {
+			isa = PBXGroup;
+			children = (
+				EB544C39286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift */,
+				EB544C42286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift */,
+				EB544C3F286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift */,
+				EB544C3C286324DE0033B3C3 /* DefaultCollectionViewDelegate.swift */,
+			);
+			path = CollectionFlow;
+			sourceTree = "<group>";
+		};
+		EB544C6A28699E610033B3C3 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				EB40811A286EEFBD00A37CFE /* DateTimeHelper */,
+				848EAAD82869E217004E30AE /* ImagePicker */,
+				EB544C46286324F50033B3C3 /* CollectionFlow */,
+				848EAAD72869E1E0004E30AE /* TabBar */,
+				848EAAD62869E1A7004E30AE /* FirstTab */,
+				EB544C6F28699F3E0033B3C3 /* SecondTab */,
+				848EAAD92869E23A004E30AE /* SelectedViewController */,
+				EB544C09285C5E650033B3C3 /* ThirdTab */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		EB544C6B28699E740033B3C3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EB544BE8285B43EE0033B3C3 /* SceneDelegate.swift */,
+				EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EB544C6E28699EA10033B3C3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EB544BF4285B43F10033B3C3 /* Info.plist */,
+				EB544BEF285B43F10033B3C3 /* Assets.xcassets */,
+				EB544BF1285B43F10033B3C3 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EB544C6F28699F3E0033B3C3 /* SecondTab */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */,
+				EB544C0B285C5E870033B3C3 /* SecondViewController.swift */,
+				EB544C302861D7A90033B3C3 /* CollectionViewCell */,
+			);
+			path = SecondTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +292,12 @@
 			files = (
 				EB544BF3285B43F10033B3C3 /* LaunchScreen.storyboard in Resources */,
 				EB544BF0285B43F10033B3C3 /* Assets.xcassets in Resources */,
+				EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */,
+				EBBB00DE286B0C5C0099D2B0 /* RecordSpeech.storyboard in Resources */,
+				EBBB00E5286B0CD40099D2B0 /* ThirdTab.storyboard in Resources */,
 				EB544BEE285B43EE0033B3C3 /* Main.storyboard in Resources */,
+				EBBB00E2286B0C9D0099D2B0 /* CollectionView.storyboard in Resources */,
+				EB544C662865C39B0033B3C3 /* SelectedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,9 +308,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB544C3A286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift in Sources */,
+				EB544C40286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift in Sources */,
+				EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */,
+				EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */,
 				EB544C0C285C5E870033B3C3 /* SecondViewController.swift in Sources */,
+				EB544C33286323D60033B3C3 /* EntityProvider.swift in Sources */,
+				EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */,
 				EB544BEB285B43EE0033B3C3 /* RecordSpeechViewController.swift in Sources */,
+				EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */,
+				EB544C3D286324DF0033B3C3 /* DefaultCollectionViewDelegate.swift in Sources */,
 				EB544C0F285C5E9C0033B3C3 /* ThirdViewController.swift in Sources */,
+				EB544C4F2863278B0033B3C3 /* CollectionViewCell.swift in Sources */,
+				EB544C292861D5DF0033B3C3 /* Entity.swift in Sources */,
 				EB544C1B286062500033B3C3 /* ImagePicker.swift in Sources */,
 				EB544BE7285B43EE0033B3C3 /* AppDelegate.swift in Sources */,
 				EB544BE9285B43EE0033B3C3 /* SceneDelegate.swift in Sources */,
@@ -180,6 +344,22 @@
 				EB544BF2285B43F10033B3C3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB544C652865C39A0033B3C3 /* Base */,
+			);
+			name = SelectedViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBBB00E1286B0C9D0099D2B0 /* Base */,
+			);
+			name = CollectionView.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -308,7 +488,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJG6Q8EU45;
-				INFOPLIST_FILE = Collection/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Collection/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,7 +507,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJG6Q8EU45;
-				INFOPLIST_FILE = Collection/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Collection/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

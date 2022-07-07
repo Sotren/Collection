@@ -65,7 +65,7 @@ open class ImagePicker: NSObject {
 
 extension ImagePicker: UIImagePickerControllerDelegate {
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-       pickerController(picker, didSelect: nil)
+        pickerController(picker, didSelect: nil)
     }
     
     public func imagePickerController(_ picker: UIImagePickerController,
