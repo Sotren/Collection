@@ -40,15 +40,28 @@ class SecondViewController: UICollectionViewController {
         ]
         return result
     }()
-    var datasource = [Item]()
+    var datasource:[Item] {
+        let itemsFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
+        
+        do {
+            let fetchedItems = try manageObjectContext.fetch(itemsFetch) as! [Item]
+            return fetchedItems
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+    }
+    var manageObjectContext: NSManagedObjectContext!
+
     
     override func viewDidLoad() {
+        print(datasource.first?.date)
         super.viewDidLoad()
         self.collectionView.register(CollectionViewCell.nib,
                                      forCellWithReuseIdentifier: CollectionViewCell.reuseID)
         collectionView.contentInset = .zero
         updatePresentationStyle()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: selectedStyle.buttonImage, style: .plain, target: self, action: #selector(changeContentLayout))
+       // loadSaveData()
     }
     
     private func updatePresentationStyle() {
