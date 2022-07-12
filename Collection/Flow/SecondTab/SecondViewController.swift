@@ -13,7 +13,7 @@ class SecondViewController: UICollectionViewController {
     override func awakeFromNib() {
         navigationItem.title = "Collection"
     }
-    
+    var context = CoreDataManager.shared.persistentContainer.viewContext
     private enum PresentationStyle: String, CaseIterable {
         case table
         case defaultGrid
@@ -40,21 +40,19 @@ class SecondViewController: UICollectionViewController {
         ]
         return result
     }()
-    var datasource:[Item] {
+    var datasource: [Item] {
         let itemsFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
         
         do {
-            let fetchedItems = try manageObjectContext.fetch(itemsFetch) as! [Item]
+            let fetchedItems = try context.fetch(itemsFetch) as! [Item]
+            print(fetchedItems.first?.image)
             return fetchedItems
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
     }
-    var manageObjectContext: NSManagedObjectContext!
-
     
     override func viewDidLoad() {
-        print(datasource.first?.date)
         super.viewDidLoad()
         self.collectionView.register(CollectionViewCell.nib,
                                      forCellWithReuseIdentifier: CollectionViewCell.reuseID)

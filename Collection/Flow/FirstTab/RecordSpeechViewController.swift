@@ -7,6 +7,7 @@
 
 import UIKit
 import Speech
+import CoreData
 
 class RecordSpeechViewController: UIViewController {
     
@@ -19,13 +20,21 @@ class RecordSpeechViewController: UIViewController {
     let audioEngine = AVAudioEngine()
     var imagePicker: ImagePicker!
     let dataTimeSetUp = DateTimeHelper()
-    
+    let entity = NSEntityDescription.entity(forEntityName: "Item", in: CoreDataManager.shared.persistentContainer.viewContext)
+  
     //MARK: - Save to core data
     func setUpSave () {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTapped))
     }
     @objc func saveTapped () {
-        var test = CoreDataManager.shared.newItems(time: dataTimeSetUp.timeFormatter(), date: dataTimeSetUp.dateString(), text: textView.text, image: (imageForPicker.image?.pngData())!)
+        let newItem = NSManagedObject(entity: entity!, insertInto: CoreDataManager.shared.persistentContainer.viewContext)
+        newItem.setValue(dataTimeSetUp.timeFormatter(), forKey:"date")
+        newItem.setValue(dataTimeSetUp.timeFormatter(), forKey:"time")
+        newItem.setValue(textView.text, forKey:"text")
+        newItem.setValue(imageForPicker.image?.jpegData(compressionQuality: 1.0), forKey:"image")
+        print(imageForPicker.image?.jpegData(compressionQuality: 1.0))
+      
+//        var test = CoreDataManager.shared.newItems(time: dataTimeSetUp.timeFormatter(), date: dataTimeSetUp.dateString(), text: textView.text, image: (imageForPicker.image?.pngData())!)
         CoreDataManager.shared.saveContext()
         
     }
