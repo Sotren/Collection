@@ -32,11 +32,7 @@ class RecordSpeechViewController: UIViewController {
         newItem.setValue(dataTimeSetUp.timeFormatter(), forKey:"time")
         newItem.setValue(textView.text, forKey:"text")
         newItem.setValue(imageForPicker.image?.jpegData(compressionQuality: 1.0), forKey:"image")
-        print(imageForPicker.image?.jpegData(compressionQuality: 1.0))
-      
-//        var test = CoreDataManager.shared.newItems(time: dataTimeSetUp.timeFormatter(), date: dataTimeSetUp.dateString(), text: textView.text, image: (imageForPicker.image?.pngData())!)
         CoreDataManager.shared.saveContext()
-        
     }
     // MARK: - ViewController lifecycle
     override func awakeFromNib() {

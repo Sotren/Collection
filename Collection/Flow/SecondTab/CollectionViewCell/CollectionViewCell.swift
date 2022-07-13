@@ -30,8 +30,7 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     func update(time: String, image: Data, date: String) {
-        let unencodedData = Data(base64Encoded: image)
-        let image = UIImage(data: unencodedData!)
+        let image = UIImage(data: image)
         imageIcon.image = image
         timeLabel.text = time
         dateLabel.text = date

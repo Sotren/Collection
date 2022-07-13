@@ -12,15 +12,17 @@ class SelectedViewController: UIViewController {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    //var dataFromCell: Entity!
+    var dataFromCell: Item!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setDataToView()
     }
     
-//    func setDataToView() {
-//        iconImage.image = dataFromCell.icon
-//        dateLabel.text = dataFromCell.date
-//        timeLabel.text = dataFromCell.time
-//    }
+    func setDataToView() {
+        let image = UIImage(data: dataFromCell.image!)
+        iconImage.image = image
+        dateLabel.text = dataFromCell.date
+        timeLabel.text = dataFromCell.time
+    }
 }

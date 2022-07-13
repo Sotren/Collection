@@ -40,12 +40,10 @@ class SecondViewController: UICollectionViewController {
         ]
         return result
     }()
-    var datasource: [Item] {
+    var fetchData: [Item]  {
         let itemsFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
-        
         do {
             let fetchedItems = try context.fetch(itemsFetch) as! [Item]
-            print(fetchedItems.first?.image)
             return fetchedItems
         } catch {
             fatalError("Failed to fetch employees: \(error)")
@@ -59,7 +57,6 @@ class SecondViewController: UICollectionViewController {
         collectionView.contentInset = .zero
         updatePresentationStyle()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: selectedStyle.buttonImage, style: .plain, target: self, action: #selector(changeContentLayout))
-       // loadSaveData()
     }
     
     private func updatePresentationStyle() {
@@ -80,7 +77,7 @@ class SecondViewController: UICollectionViewController {
 // MARK: UICollectionViewDataSource & UICollectionViewDelegate
 extension SecondViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return datasource.count
+        return fetchData.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -88,7 +85,7 @@ extension SecondViewController {
                                                             for: indexPath) as? CollectionViewCell else {
             fatalError("Wrong cell")
         }
-        let collection = datasource[indexPath.item]
+        let collection = fetchData[indexPath.item]
         cell.update(time: collection.time!, image: collection.image!, date: collection.date!)
         return cell
     }
