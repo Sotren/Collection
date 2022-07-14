@@ -7,6 +7,7 @@
 
 import UIKit
 import Speech
+import CoreData
 
 class RecordSpeechViewController: UIViewController {
     
@@ -18,6 +19,21 @@ class RecordSpeechViewController: UIViewController {
     var recognitionTask: SFSpeechRecognitionTask?
     let audioEngine = AVAudioEngine()
     var imagePicker: ImagePicker!
+    let dataTimeSetUp = DateTimeHelper()
+    let entity = NSEntityDescription.entity(forEntityName: "Item", in: CoreDataManager.shared.persistentContainer.viewContext)
+  
+    //MARK: - Save to core data
+    func setUpSave () {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTapped))
+    }
+    @objc func saveTapped () {
+        let newItem = NSManagedObject(entity: entity!, insertInto: CoreDataManager.shared.persistentContainer.viewContext)
+        newItem.setValue(dataTimeSetUp.timeFormatter(), forKey:"date")
+        newItem.setValue(dataTimeSetUp.timeFormatter(), forKey:"time")
+        newItem.setValue(textView.text, forKey:"text")
+        newItem.setValue(imageForPicker.image?.jpegData(compressionQuality: 1.0), forKey:"image")
+        CoreDataManager.shared.saveContext()
+    }
     // MARK: - ViewController lifecycle
     override func awakeFromNib() {
         navigationItem.title = "Запись текста"
@@ -28,7 +44,9 @@ class RecordSpeechViewController: UIViewController {
         recordButton.isEnabled = false
         speechRecognizer?.delegate = self
         authSpeech()
+        print()
         imagePicker = ImagePicker(presentationController: self, delegate: self)
+        setUpSave()
     }
     //MARK: - ImagePicker
     @IBAction func showImagePicker(_ sender: UIButton) {

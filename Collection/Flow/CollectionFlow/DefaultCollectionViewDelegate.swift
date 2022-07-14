@@ -20,7 +20,8 @@ class DefaultCollectionViewDelegate: NSObject, CollectionViewSelectableItemDeleg
         guard let vc = UIStoryboard(name: "SelectedViewController", bundle: nil).instantiateViewController(identifier: "SelectedViewController") as? SelectedViewController else { return }
         let topvc = UIApplication.topViewController()
         let secondVcData = SecondViewController()
-        vc.dataFromCell = secondVcData.datasource[indexPath.row]
+        print(secondVcData.fetchData)
+        vc.dataFromCell = secondVcData.fetchData[indexPath.item]
         topvc?.navigationController?.pushViewController(vc, animated: true)
     }
 }

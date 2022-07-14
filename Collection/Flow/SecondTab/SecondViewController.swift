@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import CoreData
 
 class SecondViewController: UICollectionViewController {
     
     override func awakeFromNib() {
         navigationItem.title = "Collection"
     }
-    
+    var context = CoreDataManager.shared.persistentContainer.viewContext
     private enum PresentationStyle: String, CaseIterable {
         case table
         case defaultGrid
@@ -39,7 +40,15 @@ class SecondViewController: UICollectionViewController {
         ]
         return result
     }()
-    var datasource: [Entity] = EntityProvider.get()
+    var fetchData: [Item]  {
+        let itemsFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
+        do {
+            let fetchedItems = try context.fetch(itemsFetch) as! [Item]
+            return fetchedItems
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +77,7 @@ class SecondViewController: UICollectionViewController {
 // MARK: UICollectionViewDataSource & UICollectionViewDelegate
 extension SecondViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return datasource.count
+        return fetchData.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -76,8 +85,8 @@ extension SecondViewController {
                                                             for: indexPath) as? CollectionViewCell else {
             fatalError("Wrong cell")
         }
-        let collection = datasource[indexPath.item]
-        cell.update(time: collection.time, image: collection.icon, date: collection.date)
+        let collection = fetchData[indexPath.item]
+        cell.update(time: collection.time!, image: collection.image!, date: collection.date!)
         return cell
     }
 }
