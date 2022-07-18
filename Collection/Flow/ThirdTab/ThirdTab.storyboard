@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFR-w3-73E">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,18 +11,66 @@
         <!--Third View Controller-->
         <scene sceneID="szF-un-kRX">
             <objects>
-                <viewController id="dFR-w3-73E" customClass="ThirdViewController" customModule="Collection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" id="dFR-w3-73E" customClass="ThirdViewController" customModule="Collection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tak-Ca-P55">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hI3-Pl-GHs">
+                                <rect key="frame" x="20" y="187" width="374" height="532"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-dq-8we">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="266"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AwQ-16-b5g">
+                                        <rect key="frame" x="0.0" y="266" width="374" height="266"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEH-jd-QMP">
+                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="266"/>
+                                                <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="PlayButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="QlT-Kt-Gpn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-YI-BfT">
+                                                <rect key="frame" x="124.5" y="0.0" width="125" height="266"/>
+                                                <state key="normal" title="Pause"/>
+                                                <connections>
+                                                    <action selector="PauseButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="4En-KM-OPb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-7A-9WL">
+                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="266"/>
+                                                <state key="normal" title="Stop"/>
+                                                <connections>
+                                                    <action selector="StopButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="6BR-KY-VEr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xCD-6o-oxx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hI3-Pl-GHs" firstAttribute="centerY" secondItem="xCD-6o-oxx" secondAttribute="centerY" id="8eB-Mz-HUc"/>
+                            <constraint firstItem="hI3-Pl-GHs" firstAttribute="width" secondItem="tak-Ca-P55" secondAttribute="height" multiplier="187:448" id="A3L-kn-dt5"/>
+                            <constraint firstItem="hI3-Pl-GHs" firstAttribute="centerX" secondItem="xCD-6o-oxx" secondAttribute="centerX" id="mtu-cd-h0s"/>
+                            <constraint firstItem="hI3-Pl-GHs" firstAttribute="height" secondItem="tak-Ca-P55" secondAttribute="height" multiplier="0.59375" id="tLU-5L-otF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I24-O9-0T3"/>
+                    <connections>
+                        <outlet property="TimeLabel" destination="Sc4-dq-8we" id="MkE-UJ-4ry"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGu-4l-SxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4423" y="799"/>
+            <point key="canvasLocation" x="4421.739130434783" y="798.88392857142856"/>
         </scene>
     </scenes>
     <resources>

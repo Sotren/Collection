@@ -58,7 +58,6 @@ class SecondViewController: UICollectionViewController {
         updatePresentationStyle()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: selectedStyle.buttonImage, style: .plain, target: self, action: #selector(changeContentLayout))
     }
-    
     private func updatePresentationStyle() {
         collectionView.delegate = styleDelegates[selectedStyle]
         collectionView.performBatchUpdates({
