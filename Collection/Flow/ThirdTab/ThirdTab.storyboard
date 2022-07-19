@@ -21,7 +21,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-dq-8we">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="266"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -65,7 +65,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="I24-O9-0T3"/>
                     <connections>
-                        <outlet property="TimeLabel" destination="Sc4-dq-8we" id="MkE-UJ-4ry"/>
+                        <outlet property="timeLabel" destination="Sc4-dq-8we" id="MkE-UJ-4ry"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGu-4l-SxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

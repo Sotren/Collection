@@ -118,6 +118,14 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		EB30E7322886CC9E0027E00F /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				EB30E723288538840027E00F /* Timer.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		EB40810B286C9ED200A37CFE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +145,6 @@
 		EB544BDA285B43EE0033B3C3 = {
 			isa = PBXGroup;
 			children = (
-				EB30E723288538840027E00F /* Timer.swift */,
 				EB544BE5285B43EE0033B3C3 /* Collection */,
 				EB544BE4285B43EE0033B3C3 /* Products */,
 			);
@@ -202,6 +209,7 @@
 		EB544C6A28699E610033B3C3 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				EB30E7322886CC9E0027E00F /* Timer */,
 				EB30E7112872F3FC0027E00F /* DataModel */,
 				EB40811A286EEFBD00A37CFE /* DateTimeHelper */,
 				848EAAD82869E217004E30AE /* ImagePicker */,
