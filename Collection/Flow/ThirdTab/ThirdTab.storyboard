@@ -32,21 +32,21 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="124.5" height="266"/>
                                                 <state key="normal" title="Play"/>
                                                 <connections>
-                                                    <action selector="PlayButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="QlT-Kt-Gpn"/>
+                                                    <action selector="playButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="QlT-Kt-Gpn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-YI-BfT">
                                                 <rect key="frame" x="124.5" y="0.0" width="125" height="266"/>
                                                 <state key="normal" title="Pause"/>
                                                 <connections>
-                                                    <action selector="PauseButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="4En-KM-OPb"/>
+                                                    <action selector="pauseButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="4En-KM-OPb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-7A-9WL">
                                                 <rect key="frame" x="249.5" y="0.0" width="124.5" height="266"/>
                                                 <state key="normal" title="Stop"/>
                                                 <connections>
-                                                    <action selector="StopButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="6BR-KY-VEr"/>
+                                                    <action selector="stopButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="6BR-KY-VEr"/>
                                                 </connections>
                                             </button>
                                         </subviews>

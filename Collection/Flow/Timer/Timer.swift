@@ -18,23 +18,22 @@ class TimerModel {
     var myTimer = Timer()
     var delegate: TimerModelDelegate?
     
-    init(timeRemaining:Int = 1500) {
+    init(timeRemaining: Int = 1500) {
         self.timeRemaining = timeRemaining
     }
     
     func startTimer() {
-        if !timerIsOn{
+        if !timerIsOn {
             myTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startTime), userInfo: nil, repeats: true)
             timerIsOn = true
         }
     }
     
-    func pouseTimer () {
+    func pauseTimer () {
         if myTimer.isValid == true {
             myTimer.invalidate()
             timerIsOn = false
         }
-        
     }
     
     func stopTimer() {

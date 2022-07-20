@@ -23,14 +23,15 @@ class ThirdViewController: UIViewController {
         navigationItem.title = "Timer"
     }
     
-    @IBAction func PlayButtonPressed(_ sender: Any) {
+    @IBAction func playButtonPressed(_ sender: Any) {
         timerService.startTimer()
     }
-    @IBAction func PauseButtonPressed(_ sender: Any) {
-        timerService.pouseTimer()
+    
+    @IBAction func pauseButtonPressed(_ sender: Any) {
+        timerService.pauseTimer()
     }
     
-    @IBAction func StopButtonPressed(_ sender: Any) {
+    @IBAction func stopButtonPressed(_ sender: Any) {
         timerService.stopTimer()
         timeLabel.text = "25:00"
     }
