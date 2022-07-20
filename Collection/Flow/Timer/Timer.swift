@@ -29,7 +29,7 @@ class TimerModel {
         }
     }
     
-    func pauseTimer () {
+    func pauseTimer() {
         if myTimer.isValid == true {
             myTimer.invalidate()
             timerIsOn = false
