@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TimerModelDelegate {
-    func time(timeRemaining:Int)
+    func time(timeRemaining: Int)
 }
 
 class TimerModel {
