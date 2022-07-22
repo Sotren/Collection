@@ -16,7 +16,7 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timerService.delegate = self
-        timeLabel.text = "25:00"
+        timeLabel.text = "25:10"
     }
     
     override func awakeFromNib() {
@@ -33,7 +33,7 @@ class ThirdViewController: UIViewController {
     
     @IBAction func stopButtonPressed(_ sender: Any) {
         timerService.stopTimer()
-        timeLabel.text = "25:00"
+        timeLabel.text = "21:00"
     }
 }
 //MARK: - TimerModelDelegate
@@ -45,7 +45,7 @@ extension ThirdViewController: TimerModelDelegate {
         timeLabel.text = "\(minutesLeft):\(secondsLeft)"
         if timeRemaining <= 0 {
             timerService.stopTimer()
-            timeLabel.text = "25:00"
+            timeLabel.text = "21:00"
         }
     }
 }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,34 +18,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hI3-Pl-GHs">
-                                <rect key="frame" x="20" y="187" width="374" height="532"/>
+                                <rect key="frame" x="149.5" y="412" width="115" height="82"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-dq-8we">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="266"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AwQ-16-b5g">
-                                        <rect key="frame" x="0.0" y="266" width="374" height="266"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AwQ-16-b5g">
+                                        <rect key="frame" x="0.0" y="41" width="115" height="41"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEH-jd-QMP">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="266"/>
-                                                <state key="normal" title="Play"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEH-jd-QMP">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="41"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="playButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="QlT-Kt-Gpn"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-YI-BfT">
-                                                <rect key="frame" x="124.5" y="0.0" width="125" height="266"/>
-                                                <state key="normal" title="Pause"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-YI-BfT">
+                                                <rect key="frame" x="45" y="0.0" width="25" height="41"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="pause.circle.fill" catalog="system" symbolScale="large"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="pauseButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="4En-KM-OPb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-7A-9WL">
-                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="266"/>
-                                                <state key="normal" title="Stop"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-7A-9WL">
+                                                <rect key="frame" x="90" y="0.0" width="25" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="stop.circle" catalog="system" symbolScale="large"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="stopButtonPressed:" destination="dFR-w3-73E" eventType="touchUpInside" id="6BR-KY-VEr"/>
                                                 </connections>
@@ -58,9 +66,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hI3-Pl-GHs" firstAttribute="centerY" secondItem="xCD-6o-oxx" secondAttribute="centerY" id="8eB-Mz-HUc"/>
-                            <constraint firstItem="hI3-Pl-GHs" firstAttribute="width" secondItem="tak-Ca-P55" secondAttribute="height" multiplier="187:448" id="A3L-kn-dt5"/>
                             <constraint firstItem="hI3-Pl-GHs" firstAttribute="centerX" secondItem="xCD-6o-oxx" secondAttribute="centerX" id="mtu-cd-h0s"/>
-                            <constraint firstItem="hI3-Pl-GHs" firstAttribute="height" secondItem="tak-Ca-P55" secondAttribute="height" multiplier="0.59375" id="tLU-5L-otF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I24-O9-0T3"/>
@@ -74,6 +80,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pause.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
+        <image name="stop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

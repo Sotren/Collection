@@ -13,13 +13,13 @@ protocol TimerModelDelegate {
 
 class TimerModel {
     
-    var timeRemaining: Int
+    var seconds: Int
     var timerIsOn = false
     var myTimer = Timer()
     var delegate: TimerModelDelegate?
     
-    init(timeRemaining: Int = 1500) {
-        self.timeRemaining = timeRemaining
+    init(timeRemaining: Int = 1510) {
+        self.seconds = timeRemaining
     }
     
     func startTimer() {
@@ -30,22 +30,22 @@ class TimerModel {
     }
     
     func pauseTimer() {
-        if myTimer.isValid == true {
+        if myTimer.isValid {
             myTimer.invalidate()
             timerIsOn = false
         }
     }
     
     func stopTimer() {
-        if myTimer.isValid == true {
+        if myTimer.isValid {
             myTimer.invalidate()
-            timeRemaining = 1500
+            seconds = 1510
             timerIsOn = false
         }
     }
     
     @objc func startTime() {
-        delegate?.time(timeRemaining: timeRemaining)
-        timeRemaining -= 1
+        delegate?.time(timeRemaining: seconds)
+        seconds -= 1
     }
 }
