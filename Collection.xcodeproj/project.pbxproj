@@ -10,6 +10,7 @@
 		EB30E70F2872F3F50027E00F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB30E70D2872F3F50027E00F /* DataModel.xcdatamodeld */; };
 		EB30E71F287711870027E00F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30E71E287711860027E00F /* CoreDataManager.swift */; };
 		EB30E724288538840027E00F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30E723288538840027E00F /* Timer.swift */; };
+		EB30E73B288AB31D0027E00F /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30E73A288AB31D0027E00F /* CustomProgressView.swift */; };
 		EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408114286EE1BC00A37CFE /* Application+Extension.swift */; };
 		EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408117286EE64400A37CFE /* DateTimeHelper.swift */; };
 		EB544BE7285B43EE0033B3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 		EB30E70E2872F3F50027E00F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EB30E71E287711860027E00F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		EB30E723288538840027E00F /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		EB30E73A288AB31D0027E00F /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		EB408114286EE1BC00A37CFE /* Application+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Extension.swift"; sourceTree = "<group>"; };
 		EB408117286EE64400A37CFE /* DateTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeHelper.swift; sourceTree = "<group>"; };
 		EB544BE3285B43EE0033B3C3 /* Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 			children = (
 				EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */,
 				EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */,
+				EB30E73A288AB31D0027E00F /* CustomProgressView.swift */,
 			);
 			path = ThirdTab;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			files = (
 				EB544C3A286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift in Sources */,
 				EB544C40286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift in Sources */,
+				EB30E73B288AB31D0027E00F /* CustomProgressView.swift in Sources */,
 				EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */,
 				EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */,
 				EB30E71F287711870027E00F /* CoreDataManager.swift in Sources */,

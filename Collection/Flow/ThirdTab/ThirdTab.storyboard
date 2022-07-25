@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,19 +19,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hI3-Pl-GHs">
-                                <rect key="frame" x="149.5" y="412" width="115" height="82"/>
+                                <rect key="frame" x="132" y="405" width="150" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-dq-8we">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="tqa-nF-NZV" customClass="CustomProgressVIew">
+                                        <rect key="frame" x="0.0" y="32" width="150" height="33"/>
+                                        <color key="progressTintColor" name="AccentColor"/>
+                                    </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AwQ-16-b5g">
-                                        <rect key="frame" x="0.0" y="41" width="115" height="41"/>
+                                        <rect key="frame" x="0.0" y="64" width="150" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEH-jd-QMP">
-                                                <rect key="frame" x="0.0" y="0.0" width="25" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="32"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
                                                 </state>
@@ -39,7 +44,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-YI-BfT">
-                                                <rect key="frame" x="45" y="0.0" width="25" height="41"/>
+                                                <rect key="frame" x="56.5" y="0.0" width="37" height="32"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="pause.circle.fill" catalog="system" symbolScale="large"/>
                                                 </state>
@@ -48,7 +53,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-7A-9WL">
-                                                <rect key="frame" x="90" y="0.0" width="25" height="41"/>
+                                                <rect key="frame" x="113.5" y="0.0" width="36.5" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="stop.circle" catalog="system" symbolScale="large"/>
@@ -71,6 +76,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="I24-O9-0T3"/>
                     <connections>
+                        <outlet property="progressBar" destination="tqa-nF-NZV" id="6KN-85-TIW"/>
                         <outlet property="timeLabel" destination="Sc4-dq-8we" id="MkE-UJ-4ry"/>
                     </connections>
                 </viewController>
@@ -83,6 +89,9 @@
         <image name="pause.circle.fill" catalog="system" width="128" height="121"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="stop.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -12,11 +12,13 @@ class ThirdViewController: UIViewController {
     private let timerService = TimerModel()
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var timeLabel: UILabel!
+    private let progressBarView = CustomProgressView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         timerService.delegate = self
         timeLabel.text = "25:10"
+  
     }
     
     override func awakeFromNib() {
@@ -33,19 +35,21 @@ class ThirdViewController: UIViewController {
     
     @IBAction func stopButtonPressed(_ sender: Any) {
         timerService.stopTimer()
-        timeLabel.text = "21:00"
+        timeLabel.text = "25:10"
     }
 }
 //MARK: - TimerModelDelegate
 extension ThirdViewController: TimerModelDelegate {
     
     func time(timeRemaining: Int) {
+        let seconds = Float(timeRemaining)
         let minutesLeft = Int(timeRemaining) / 60 % 60
         let secondsLeft = Int(timeRemaining) % 60
+        progressBar.setProgress(seconds, animated: true)
         timeLabel.text = "\(minutesLeft):\(secondsLeft)"
         if timeRemaining <= 0 {
             timerService.stopTimer()
-            timeLabel.text = "21:00"
+            timeLabel.text = "25:10"
         }
     }
 }
