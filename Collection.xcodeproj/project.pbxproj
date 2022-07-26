@@ -10,7 +10,6 @@
 		EB30E70F2872F3F50027E00F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB30E70D2872F3F50027E00F /* DataModel.xcdatamodeld */; };
 		EB30E71F287711870027E00F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30E71E287711860027E00F /* CoreDataManager.swift */; };
 		EB30E724288538840027E00F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30E723288538840027E00F /* Timer.swift */; };
-		EB30E73B288AB31D0027E00F /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30E73A288AB31D0027E00F /* CustomProgressView.swift */; };
 		EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408114286EE1BC00A37CFE /* Application+Extension.swift */; };
 		EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408117286EE64400A37CFE /* DateTimeHelper.swift */; };
 		EB544BE7285B43EE0033B3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544BE6285B43EE0033B3C3 /* AppDelegate.swift */; };
@@ -30,6 +29,7 @@
 		EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */; };
 		EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C522864496F0033B3C3 /* SelectedViewController.swift */; };
 		EB544C662865C39B0033B3C3 /* SelectedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */; };
+		EB5EBC69289005F30050C2D0 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EBC68289005F30050C2D0 /* CustomProgressView.swift */; };
 		EBBB00DE286B0C5C0099D2B0 /* RecordSpeech.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */; };
 		EBBB00E2286B0C9D0099D2B0 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */; };
 		EBBB00E5286B0CD40099D2B0 /* ThirdTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */; };
@@ -39,7 +39,6 @@
 		EB30E70E2872F3F50027E00F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EB30E71E287711860027E00F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		EB30E723288538840027E00F /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
-		EB30E73A288AB31D0027E00F /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		EB408114286EE1BC00A37CFE /* Application+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Application+Extension.swift"; sourceTree = "<group>"; };
 		EB408117286EE64400A37CFE /* DateTimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeHelper.swift; sourceTree = "<group>"; };
 		EB544BE3285B43EE0033B3C3 /* Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +60,7 @@
 		EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		EB544C522864496F0033B3C3 /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
 		EB544C652865C39A0033B3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Base.lproj/SelectedViewController.storyboard; sourceTree = "<group>"; };
+		EB5EBC68289005F30050C2D0 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordSpeech.storyboard; sourceTree = SOURCE_ROOT; };
 		EBBB00E1286B0C9D0099D2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Flow/TabBar/Base.lproj/CollectionView.storyboard; sourceTree = SOURCE_ROOT; };
 		EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdTab.storyboard; sourceTree = "<group>"; };
@@ -163,6 +163,7 @@
 		EB544BE5285B43EE0033B3C3 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				EB5EBC6B289008210050C2D0 /* Elements */,
 				EB544C6B28699E740033B3C3 /* Application */,
 				EB544C2B2861D5E80033B3C3 /* Entities */,
 				EB40810B286C9ED200A37CFE /* Extension */,
@@ -177,7 +178,6 @@
 			children = (
 				EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */,
 				EB544C0E285C5E9C0033B3C3 /* ThirdViewController.swift */,
-				EB30E73A288AB31D0027E00F /* CustomProgressView.swift */,
 			);
 			path = ThirdTab;
 			sourceTree = "<group>";
@@ -253,6 +253,14 @@
 				EB544C302861D7A90033B3C3 /* CollectionViewCell */,
 			);
 			path = SecondTab;
+			sourceTree = "<group>";
+		};
+		EB5EBC6B289008210050C2D0 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				EB5EBC68289005F30050C2D0 /* CustomProgressView.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +340,7 @@
 			files = (
 				EB544C3A286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift in Sources */,
 				EB544C40286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift in Sources */,
-				EB30E73B288AB31D0027E00F /* CustomProgressView.swift in Sources */,
+				EB5EBC69289005F30050C2D0 /* CustomProgressView.swift in Sources */,
 				EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */,
 				EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */,
 				EB30E71F287711870027E00F /* CoreDataManager.swift in Sources */,

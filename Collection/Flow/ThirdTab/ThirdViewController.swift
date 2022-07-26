@@ -12,7 +12,6 @@ class ThirdViewController: UIViewController {
     private let timerService = TimerModel()
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var timeLabel: UILabel!
-    private let progressBarView = CustomProgressView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
