@@ -25,13 +25,8 @@ class ThirdViewController: UIViewController {
     }
     
     func buttonState(state: Bool) {
-        if state == true {
-            pauseButton.isEnabled = false
-            stopButton.isEnabled = false
-        } else {
-            pauseButton.isEnabled = true
-            stopButton.isEnabled = true
-        }
+        pauseButton.isEnabled = state ? false : true
+        stopButton.isEnabled = state ? false : true
     }
     
     override func awakeFromNib() {
