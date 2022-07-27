@@ -15,7 +15,7 @@ import UIKit
         }
     }
     
-    @IBInspectable public var hightScale: CGFloat = 2 {
+    @IBInspectable public var hightScale: CGFloat = 5 {
         didSet {
             transform = transform.scaledBy(x: 1, y:hightScale)
         }

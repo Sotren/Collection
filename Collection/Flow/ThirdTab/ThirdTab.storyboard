@@ -18,27 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hI3-Pl-GHs">
-                                <rect key="frame" x="132" y="405" width="150" height="96"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hI3-Pl-GHs">
+                                <rect key="frame" x="132" y="406" width="150" height="94.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-dq-8we">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="tqa-nF-NZV" customClass="CustomProgressView" customModule="Collection" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="32" width="150" height="33"/>
+                                        <rect key="frame" x="0.0" y="51" width="150" height="2.5"/>
                                         <color key="progressTintColor" name="AccentColor"/>
                                         <color key="trackTintColor" systemColor="systemPinkColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hightScale">
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AwQ-16-b5g">
-                                        <rect key="frame" x="0.0" y="64" width="150" height="32"/>
+                                        <rect key="frame" x="0.0" y="62.5" width="150" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-YI-BfT">
                                                 <rect key="frame" x="0.0" y="0.0" width="36.5" height="32"/>
