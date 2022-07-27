@@ -40,6 +40,7 @@ class ThirdViewController: UIViewController {
     
     @IBAction func pauseButtonPressed(_ sender: Any) {
         timerService.pauseTimer()
+        pauseButton.isEnabled = false
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
@@ -56,7 +57,7 @@ extension ThirdViewController: TimerModelDelegate {
         let minutesLeft = Int(timeRemaining) / 60 % 60
         let secondsLeft = Int(timeRemaining) % 60
         progressBar.setProgress(seconds, animated: true)
-        timeLabel.text = "\(minutesLeft):\(secondsLeft)"
+        timeLabel.text = String(format: "%02d:%02d", minutesLeft, secondsLeft)
         if timeRemaining <= 0 {
             timerService.stopTimer()
             timeLabel.text = "25:10"
