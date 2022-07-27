@@ -10,14 +10,28 @@ import UIKit
 class ThirdViewController: UIViewController {
     
     private let timerService = TimerModel()
-    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var progressBar: CustomProgressView!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         timerService.delegate = self
         timeLabel.text = "25:10"
-  
+        buttonState(state: true)
+        progressBar.clipsToBounds = true
+    }
+    
+    func buttonState(state: Bool) {
+        if state == true {
+            pauseButton.isEnabled = false
+            stopButton.isEnabled = false
+        } else {
+            pauseButton.isEnabled = true
+            stopButton.isEnabled = true
+        }
     }
     
     override func awakeFromNib() {
@@ -26,6 +40,7 @@ class ThirdViewController: UIViewController {
     
     @IBAction func playButtonPressed(_ sender: Any) {
         timerService.startTimer()
+        buttonState(state: false)
     }
     
     @IBAction func pauseButtonPressed(_ sender: Any) {
@@ -35,6 +50,7 @@ class ThirdViewController: UIViewController {
     @IBAction func stopButtonPressed(_ sender: Any) {
         timerService.stopTimer()
         timeLabel.text = "25:10"
+        buttonState(state: true)
     }
 }
 //MARK: - TimerModelDelegate
