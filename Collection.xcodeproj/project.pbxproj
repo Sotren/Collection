@@ -29,6 +29,7 @@
 		EB544C502863278B0033B3C3 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */; };
 		EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C522864496F0033B3C3 /* SelectedViewController.swift */; };
 		EB544C662865C39B0033B3C3 /* SelectedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */; };
+		EB5EBC69289005F30050C2D0 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EBC68289005F30050C2D0 /* CustomProgressView.swift */; };
 		EBBB00DE286B0C5C0099D2B0 /* RecordSpeech.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */; };
 		EBBB00E2286B0C9D0099D2B0 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */; };
 		EBBB00E5286B0CD40099D2B0 /* ThirdTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */; };
@@ -59,6 +60,7 @@
 		EB544C4E2863278B0033B3C3 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		EB544C522864496F0033B3C3 /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
 		EB544C652865C39A0033B3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Base.lproj/SelectedViewController.storyboard; sourceTree = "<group>"; };
+		EB5EBC68289005F30050C2D0 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordSpeech.storyboard; sourceTree = SOURCE_ROOT; };
 		EBBB00E1286B0C9D0099D2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Flow/TabBar/Base.lproj/CollectionView.storyboard; sourceTree = SOURCE_ROOT; };
 		EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdTab.storyboard; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		EB544BE5285B43EE0033B3C3 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				EB5EBC6B289008210050C2D0 /* Elements */,
 				EB544C6B28699E740033B3C3 /* Application */,
 				EB544C2B2861D5E80033B3C3 /* Entities */,
 				EB40810B286C9ED200A37CFE /* Extension */,
@@ -252,6 +255,14 @@
 			path = SecondTab;
 			sourceTree = "<group>";
 		};
+		EB5EBC6B289008210050C2D0 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				EB5EBC68289005F30050C2D0 /* CustomProgressView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,6 +340,7 @@
 			files = (
 				EB544C3A286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift in Sources */,
 				EB544C40286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift in Sources */,
+				EB5EBC69289005F30050C2D0 /* CustomProgressView.swift in Sources */,
 				EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */,
 				EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */,
 				EB30E71F287711870027E00F /* CoreDataManager.swift in Sources */,
