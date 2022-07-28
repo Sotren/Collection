@@ -51,6 +51,14 @@
                                     <action selector="showImagePicker:" destination="PjF-hC-Gja" eventType="touchUpInside" id="AFg-vg-qtz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iP-W3-KZP">
+                                <rect key="frame" x="20" y="666" width="373" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="formatTextButtonPressed:" destination="PjF-hC-Gja" eventType="touchUpInside" id="gwP-IH-Lz8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yLP-f8-2gl"/>
                         <color key="backgroundColor" red="0.93849742410000003" green="0.94264656309999995" blue="0.9203411937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
