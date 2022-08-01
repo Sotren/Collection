@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FormatDeleteDots: textFormat {
+class FormatDeleteDots: TextFormat {
     
     func textFormatting(text: String) -> String {
         return text.deleteDots(trimText: text)

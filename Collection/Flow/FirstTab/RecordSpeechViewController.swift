@@ -9,7 +9,7 @@ import UIKit
 import Speech
 import CoreData
 
-protocol textFormat {
+protocol TextFormat {
     func textFormatting(text: String) -> String
 }
 
@@ -29,23 +29,21 @@ class RecordSpeechViewController: UIViewController {
     let deleteDotsFormat = FormatDeleteDots()
     let deletePunctuationsFormat = FormatDeletePunctuations()
     
-    
     func alertFormat() {
         let deleteSpacing = UIAlertAction(title: "Убарть пробелы",
-                                          style: .default) { [self] (action) in
+                                    style: .default) { [self] (action) in
             textView.text = deleteSpacingFormat.textFormatting(text: textView.text)
-        
         }
         let deleteDots = UIAlertAction(title: "Убрать точки",
-                                       style: .default) { [self] (action) in
+                                    style: .default) { [self] (action) in
             textView.text = deleteDotsFormat.textFormatting(text: textView.text)
         }
         let deletePunctuations = UIAlertAction(title: "Убрать запятые",
-                                               style: .default) { [self] (action) in
+                                    style: .default) { [self] (action) in
             textView.text = deletePunctuationsFormat.textFormatting(text: textView.text)
         }
         let cancelAction = UIAlertAction(title: "Отмена",
-                                style: .cancel) { (action) in
+                                    style: .cancel) { (action) in
            }
         let alert = UIAlertController(title: "Форматирование текста",message: "Выберите тип форматирования",
                                       preferredStyle: .actionSheet)
