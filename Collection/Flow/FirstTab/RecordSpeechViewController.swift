@@ -10,7 +10,8 @@ import Speech
 import CoreData
 
 protocol TextFormat {
-    func textFormatting(text: String) -> String
+    func textFormatting(text: String)
+    var onFormatDone: (String?) -> Void {get}
 }
 
 class RecordSpeechViewController: UIViewController {
@@ -25,22 +26,26 @@ class RecordSpeechViewController: UIViewController {
     var imagePicker: ImagePicker!
     let dataTimeSetUp = DateTimeHelper()
     let entity = NSEntityDescription.entity(forEntityName: "Item", in: CoreDataManager.shared.persistentContainer.viewContext)
-    let deleteSpacingFormat = FormatDeleteSpacing()
-    let deleteDotsFormat = FormatDeleteDots()
-    let deletePunctuationsFormat = FormatDeletePunctuations()
+    let deleteSpacingFormat = FormatDeleteSpacing(onFormatDone: )
+
+   // let deleteDotsFormat = FormatDeleteDots()
+   // let deletePunctuationsFormat = FormatDeletePunctuations()
     
     func alertFormat() {
         let deleteSpacing = UIAlertAction(title: "Убарть пробелы",
                                     style: .default) { [self] (action) in
+            var test: (String?) -> Void
+            let deleteSpacingFormat = FormatDeleteSpacing(onFormatDone: test)
             textView.text = deleteSpacingFormat.textFormatting(text: textView.text)
+            
         }
         let deleteDots = UIAlertAction(title: "Убрать точки",
                                     style: .default) { [self] (action) in
-            textView.text = deleteDotsFormat.textFormatting(text: textView.text)
+          //  textView.text = deleteDotsFormat.textFormatting(text: textView.text)
         }
         let deletePunctuations = UIAlertAction(title: "Убрать запятые",
                                     style: .default) { [self] (action) in
-            textView.text = deletePunctuationsFormat.textFormatting(text: textView.text)
+           // textView.text = deletePunctuationsFormat.textFormatting(text: textView.text)
         }
         let cancelAction = UIAlertAction(title: "Отмена",
                                     style: .cancel) { (action) in

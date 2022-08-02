@@ -8,8 +8,13 @@
 import Foundation
 
 class FormatDeleteSpacing: TextFormat {
-    
-    func textFormatting(text: String) -> String {
-        return text.deleteSpacing(trimText: text)
+        var onFormatDone: (String?) -> Void
+        
+        func textFormatting(text: String) {
+            onFormatDone(text.deleteSpacing(trimText: text))
+        }
+        
+        init(onFormatDone: @escaping (String?) -> Void) {
+            self.onFormatDone = onFormatDone
     }
 }
