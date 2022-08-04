@@ -30,6 +30,10 @@
 		EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544C522864496F0033B3C3 /* SelectedViewController.swift */; };
 		EB544C662865C39B0033B3C3 /* SelectedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544C642865C39A0033B3C3 /* SelectedViewController.storyboard */; };
 		EB5EBC69289005F30050C2D0 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EBC68289005F30050C2D0 /* CustomProgressView.swift */; };
+		EB5EBC6E2892A9940050C2D0 /* FormatDeleteDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EBC6D2892A9930050C2D0 /* FormatDeleteDots.swift */; };
+		EB5EBC712892A9AE0050C2D0 /* FormatDeleteSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EBC702892A9AE0050C2D0 /* FormatDeleteSpacing.swift */; };
+		EB5EBC742892A9D20050C2D0 /* FormatDeletePunctuations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EBC732892A9D20050C2D0 /* FormatDeletePunctuations.swift */; };
+		EB5EBC772892B29A0050C2D0 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EBC762892B29A0050C2D0 /* Extension+String.swift */; };
 		EBBB00DE286B0C5C0099D2B0 /* RecordSpeech.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */; };
 		EBBB00E2286B0C9D0099D2B0 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */; };
 		EBBB00E5286B0CD40099D2B0 /* ThirdTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */; };
@@ -61,6 +65,10 @@
 		EB544C522864496F0033B3C3 /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
 		EB544C652865C39A0033B3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Base.lproj/SelectedViewController.storyboard; sourceTree = "<group>"; };
 		EB5EBC68289005F30050C2D0 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		EB5EBC6D2892A9930050C2D0 /* FormatDeleteDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDeleteDots.swift; sourceTree = "<group>"; };
+		EB5EBC702892A9AE0050C2D0 /* FormatDeleteSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDeleteSpacing.swift; sourceTree = "<group>"; };
+		EB5EBC732892A9D20050C2D0 /* FormatDeletePunctuations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDeletePunctuations.swift; sourceTree = "<group>"; };
+		EB5EBC762892B29A0050C2D0 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordSpeech.storyboard; sourceTree = SOURCE_ROOT; };
 		EBBB00E1286B0C9D0099D2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Flow/TabBar/Base.lproj/CollectionView.storyboard; sourceTree = SOURCE_ROOT; };
 		EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdTab.storyboard; sourceTree = "<group>"; };
@@ -132,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				EB408114286EE1BC00A37CFE /* Application+Extension.swift */,
+				EB5EBC762892B29A0050C2D0 /* Extension+String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 		EB544C6A28699E610033B3C3 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				EB5EBC7A2892B8400050C2D0 /* TextFormatting */,
 				EB30E7322886CC9E0027E00F /* Timer */,
 				EB30E7112872F3FC0027E00F /* DataModel */,
 				EB40811A286EEFBD00A37CFE /* DateTimeHelper */,
@@ -261,6 +271,16 @@
 				EB5EBC68289005F30050C2D0 /* CustomProgressView.swift */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		EB5EBC7A2892B8400050C2D0 /* TextFormatting */ = {
+			isa = PBXGroup;
+			children = (
+				EB5EBC732892A9D20050C2D0 /* FormatDeletePunctuations.swift */,
+				EB5EBC702892A9AE0050C2D0 /* FormatDeleteSpacing.swift */,
+				EB5EBC6D2892A9930050C2D0 /* FormatDeleteDots.swift */,
+			);
+			path = TextFormatting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,10 +359,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB544C3A286324DC0033B3C3 /* CustomGriddedContentCollectionViewDelegate.swift in Sources */,
+				EB5EBC712892A9AE0050C2D0 /* FormatDeleteSpacing.swift in Sources */,
 				EB544C40286324E20033B3C3 /* DefaultGriddedContentCollectionViewDelegate.swift in Sources */,
 				EB5EBC69289005F30050C2D0 /* CustomProgressView.swift in Sources */,
 				EB408115286EE1BC00A37CFE /* Application+Extension.swift in Sources */,
 				EB408118286EE64400A37CFE /* DateTimeHelper.swift in Sources */,
+				EB5EBC742892A9D20050C2D0 /* FormatDeletePunctuations.swift in Sources */,
 				EB30E71F287711870027E00F /* CoreDataManager.swift in Sources */,
 				EB30E70F2872F3F50027E00F /* DataModel.xcdatamodeld in Sources */,
 				EB544C0C285C5E870033B3C3 /* SecondViewController.swift in Sources */,
@@ -350,9 +372,11 @@
 				EB544BEB285B43EE0033B3C3 /* RecordSpeechViewController.swift in Sources */,
 				EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */,
 				EB544C3D286324DF0033B3C3 /* DefaultCollectionViewDelegate.swift in Sources */,
+				EB5EBC6E2892A9940050C2D0 /* FormatDeleteDots.swift in Sources */,
 				EB544C0F285C5E9C0033B3C3 /* ThirdViewController.swift in Sources */,
 				EB544C4F2863278B0033B3C3 /* CollectionViewCell.swift in Sources */,
 				EB544C1B286062500033B3C3 /* ImagePicker.swift in Sources */,
+				EB5EBC772892B29A0050C2D0 /* Extension+String.swift in Sources */,
 				EB544BE7285B43EE0033B3C3 /* AppDelegate.swift in Sources */,
 				EB544BE9285B43EE0033B3C3 /* SceneDelegate.swift in Sources */,
 				EB30E724288538840027E00F /* Timer.swift in Sources */,
