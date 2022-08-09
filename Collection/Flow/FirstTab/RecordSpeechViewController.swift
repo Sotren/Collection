@@ -34,7 +34,7 @@ class RecordSpeechViewController: UIViewController {
         let deleteSpacing = UIAlertAction(title: "Убарть пробелы",
                                     style: .default) { [self] (action) in
              deleteSpacingFormat.textFormatting(text: textView.text)
-            textView.text = deleteSpacingFormat.onFormatDone // ошибка тип офк, но должно работать как-то так 
+            textView.text = deleteSpacingFormat.onFormatDone as? String ?? "Type Error"// ошибка тип офк, но должно работать как-то так
                     }
         let deleteDots = UIAlertAction(title: "Убрать точки",
                                     style: .default) { [self] (action) in
