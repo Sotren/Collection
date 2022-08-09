@@ -26,19 +26,16 @@ class RecordSpeechViewController: UIViewController {
     var imagePicker: ImagePicker!
     let dataTimeSetUp = DateTimeHelper()
     let entity = NSEntityDescription.entity(forEntityName: "Item", in: CoreDataManager.shared.persistentContainer.viewContext)
-    let deleteSpacingFormat = FormatDeleteSpacing(onFormatDone: )
-
+    let deleteSpacingFormat = FormatDeleteSpacing(onFormatDone: {_ in return } )
    // let deleteDotsFormat = FormatDeleteDots()
    // let deletePunctuationsFormat = FormatDeletePunctuations()
     
     func alertFormat() {
         let deleteSpacing = UIAlertAction(title: "Убарть пробелы",
                                     style: .default) { [self] (action) in
-            var test: (String?) -> Void
-            let deleteSpacingFormat = FormatDeleteSpacing(onFormatDone: test)
-            textView.text = deleteSpacingFormat.textFormatting(text: textView.text)
-            
-        }
+             deleteSpacingFormat.textFormatting(text: textView.text)
+            textView.text = deleteSpacingFormat.onFormatDone // ошибка тип офк, но должно работать как-то так 
+                    }
         let deleteDots = UIAlertAction(title: "Убрать точки",
                                     style: .default) { [self] (action) in
           //  textView.text = deleteDotsFormat.textFormatting(text: textView.text)
