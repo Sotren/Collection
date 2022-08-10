@@ -26,34 +26,61 @@ class RecordSpeechViewController: UIViewController {
     var imagePicker: ImagePicker!
     let dataTimeSetUp = DateTimeHelper()
     let entity = NSEntityDescription.entity(forEntityName: "Item", in: CoreDataManager.shared.persistentContainer.viewContext)
-    let deleteSpacingFormat = FormatDeleteSpacing(onFormatDone: {_ in return } )
-   // let deleteDotsFormat = FormatDeleteDots()
-   // let deletePunctuationsFormat = FormatDeletePunctuations()
+    //MARK: - Alert method
+    func nilAlert() {
+        let alert = UIAlertController(title: "Nil error", message: "Был получен nil", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Продолжить", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     func alertFormat() {
         let deleteSpacing = UIAlertAction(title: "Убарть пробелы",
-                                    style: .default) { [self] (action) in
-             deleteSpacingFormat.textFormatting(text: textView.text)
-            textView.text = deleteSpacingFormat.onFormatDone as? String ?? "Type Error"// ошибка тип офк, но должно работать как-то так
-                    }
+                                          style: .default) { [self] (action) in
+            let textFormatter = FormatDeleteSpacing(onFormatDone: {formattedText in self.textView.text = formattedText
+                if formattedText == nil {
+                    self.nilAlert()
+                }
+            })
+            textFormatter.textFormatting(text: textView.text)
+        }
         let deleteDots = UIAlertAction(title: "Убрать точки",
-                                    style: .default) { [self] (action) in
-          //  textView.text = deleteDotsFormat.textFormatting(text: textView.text)
-        }
+                                       style: .default) { [self] (action) in
+            let textFormatter = FormatDeleteDots(onFormatDone: {formattedText in self.textView.text = formattedText
+                if formattedText == nil {
+                    self.nilAlert()
+                }
+            })
+            textFormatter.textFormatting(text: textView.text)        }
         let deletePunctuations = UIAlertAction(title: "Убрать запятые",
-                                    style: .default) { [self] (action) in
-           // textView.text = deletePunctuationsFormat.textFormatting(text: textView.text)
+                                               style: .default) { [self] (action) in
+            let textFormatter = FormatDeletePunctuations(onFormatDone: {formattedText in self.textView.text = formattedText
+                if formattedText == nil {
+                    self.nilAlert()
+                }
+            })
+            textFormatter.textFormatting(text: textView.text)
         }
+        let nilTest = UIAlertAction(title: "Отправить nill",
+                                    style: .default) { [self] (action) in
+            let textFormatter = BadTextFormatter(onFormatDone: {formattedText in self.textView.text = formattedText
+                if formattedText == nil {
+                    self.nilAlert()
+                }
+            })
+            textFormatter.textFormatting(text: textView.text)
+        }
+        
         let cancelAction = UIAlertAction(title: "Отмена",
-                                    style: .cancel) { (action) in
-           }
+                                         style: .cancel) { (action) in
+        }
         let alert = UIAlertController(title: "Форматирование текста",message: "Выберите тип форматирования",
                                       preferredStyle: .actionSheet)
+        alert.addAction(nilTest)
         alert.addAction(deleteSpacing)
         alert.addAction(deleteDots)
         alert.addAction(deletePunctuations)
         alert.addAction(cancelAction)
-        self.present(alert, animated: true) 
+        self.present(alert, animated: true)
     }
     
     @IBAction func formatTextButtonPressed(_ sender: UIButton) {

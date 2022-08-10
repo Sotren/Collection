@@ -37,6 +37,7 @@
 		EBBB00DE286B0C5C0099D2B0 /* RecordSpeech.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */; };
 		EBBB00E2286B0C9D0099D2B0 /* CollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E0286B0C9D0099D2B0 /* CollectionView.storyboard */; };
 		EBBB00E5286B0CD40099D2B0 /* ThirdTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */; };
+		EBFE6BEB28A3B42F009AAE42 /* BadTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE6BEA28A3B42F009AAE42 /* BadTextFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		EBBB00DD286B0C5C0099D2B0 /* RecordSpeech.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecordSpeech.storyboard; sourceTree = SOURCE_ROOT; };
 		EBBB00E1286B0C9D0099D2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Collection/Flow/TabBar/Base.lproj/CollectionView.storyboard; sourceTree = SOURCE_ROOT; };
 		EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdTab.storyboard; sourceTree = "<group>"; };
+		EBFE6BEA28A3B42F009AAE42 /* BadTextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadTextFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 				EB5EBC732892A9D20050C2D0 /* FormatDeletePunctuations.swift */,
 				EB5EBC702892A9AE0050C2D0 /* FormatDeleteSpacing.swift */,
 				EB5EBC6D2892A9930050C2D0 /* FormatDeleteDots.swift */,
+				EBFE6BEA28A3B42F009AAE42 /* BadTextFormatter.swift */,
 			);
 			path = TextFormatting;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */,
 				EB544C3D286324DF0033B3C3 /* DefaultCollectionViewDelegate.swift in Sources */,
 				EB5EBC6E2892A9940050C2D0 /* FormatDeleteDots.swift in Sources */,
+				EBFE6BEB28A3B42F009AAE42 /* BadTextFormatter.swift in Sources */,
 				EB544C0F285C5E9C0033B3C3 /* ThirdViewController.swift in Sources */,
 				EB544C4F2863278B0033B3C3 /* CollectionViewCell.swift in Sources */,
 				EB544C1B286062500033B3C3 /* ImagePicker.swift in Sources */,

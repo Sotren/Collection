@@ -1,17 +1,17 @@
 //
-//  FormatDeleteSpacing.swift
+//  BadTextFormatter.swift
 //  Collection
 //
-//  Created by Станислав Москальцов  on 28.07.2022.
+//  Created by Станислав Москальцов  on 10.08.2022.
 //
 
 import Foundation
 
-class FormatDeleteSpacing: TextFormat {
+class BadTextFormatter : TextFormat {
     var onFormatDone: (String?) -> Void
     
     func textFormatting(text: String) {
-        onFormatDone(text.deleteSpacing(trimText: text))
+        onFormatDone(text.giveUserNil(trimText: text))
     }
     
     init(onFormatDone:  @escaping (String?) -> Void) {

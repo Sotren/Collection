@@ -8,15 +8,13 @@
 import Foundation
 
 class FormatDeletePunctuations: TextFormat {
-    //var onFormatDone: ((String?) -> Void)?
+    var onFormatDone: (String?) -> Void
     
-       var onFormatDone: (String?) -> Void
-        
-        func textFormatting(text: String) {
-            onFormatDone(text.deleteSpacing(trimText: text))
-        }
-        
-        init(onFormatDone: @escaping (String?) -> Void) {
-            self.onFormatDone = onFormatDone
+    func textFormatting(text: String) {
+        onFormatDone(text.deletePunctuations(trimText: text))
+    }
+    
+    init(onFormatDone: @escaping (String?) -> Void) {
+        self.onFormatDone = onFormatDone
     }
 }

@@ -8,16 +8,13 @@
 import Foundation
 
 class FormatDeleteDots: TextFormat {
-   // var onFormatDone: ((String?) -> Void)?
-    
     var onFormatDone: (String?) -> Void
-        
-        func textFormatting(text: String) {
-            onFormatDone(text.deleteSpacing(trimText: text))
-        }
-        
-        init(onFormatDone: @escaping (String?) -> Void) {
-            self.onFormatDone = onFormatDone
-       
+    
+    func textFormatting(text: String) {
+        onFormatDone(text.deleteDots(trimText: text))
+    }
+    
+    init(onFormatDone: @escaping (String?) -> Void) {
+        self.onFormatDone = onFormatDone
     }
 }
