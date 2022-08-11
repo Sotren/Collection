@@ -30,8 +30,4 @@ extension String {
         }
         return trimText.filter({$0 != ","})
     }
-    
-    func giveUserNil(trimText: String ) -> String? {
-        return nil
-    }
 }

@@ -7,10 +7,10 @@
 
 import Foundation
 
-class FormatDeletePunctuations: TextFormat {
+class FormatDeletePunctuations: TextFormatter {
     var onFormatDone: (String?) -> Void
     
-    func textFormatting(text: String) {
+    func format(text: String) {
         onFormatDone(text.deletePunctuations(trimText: text))
     }
     

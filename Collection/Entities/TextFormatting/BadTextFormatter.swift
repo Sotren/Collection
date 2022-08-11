@@ -7,11 +7,11 @@
 
 import Foundation
 
-class BadTextFormatter : TextFormat {
+class BadTextFormatter: TextFormatter {
     var onFormatDone: (String?) -> Void
     
-    func textFormatting(text: String) {
-        onFormatDone(text.giveUserNil(trimText: text))
+    func format(text: String) {
+        onFormatDone(nil)
     }
     
     init(onFormatDone:  @escaping (String?) -> Void) {

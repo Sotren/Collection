@@ -7,10 +7,10 @@
 
 import Foundation
 
-class FormatDeleteSpacing: TextFormat {
+class FormatDeleteSpacing: TextFormatter {
     var onFormatDone: (String?) -> Void
     
-    func textFormatting(text: String) {
+    func format(text: String) {
         onFormatDone(text.deleteSpacing(trimText: text))
     }
     
