@@ -21,6 +21,12 @@ class RecordSpeechViewController: UIViewController {
     var imagePicker: ImagePicker!
     let dataTimeSetUp = DateTimeHelper()
     let entity = NSEntityDescription.entity(forEntityName: "Item", in: CoreDataManager.shared.persistentContainer.viewContext)
+    
+    func count<Number: Numeric>(lhs: Number, rhs: Number) {
+        let sum = lhs + rhs
+        print("Сумма:\(sum)")
+    }
+    
     //MARK: - Alert method
     func nilAlert() {
         let alert = UIAlertController(title: "Неизвестная ошибка", message: "Произошла неизвестная ошибка, попробуйте позже", preferredStyle: UIAlertController.Style.alert)
@@ -74,6 +80,7 @@ class RecordSpeechViewController: UIViewController {
     
     @IBAction func formatTextButtonPressed(_ sender: UIButton) {
         alertFormat()
+        count(lhs: 1, rhs: 2)
     }
     //MARK: - Save to core data
     func setUpSave () {

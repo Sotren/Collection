@@ -39,6 +39,7 @@
 		EBBB00E5286B0CD40099D2B0 /* ThirdTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */; };
 		EBFE6BEB28A3B42F009AAE42 /* BadTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE6BEA28A3B42F009AAE42 /* BadTextFormatter.swift */; };
 		EBFE6BED28A4FCE1009AAE42 /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE6BEC28A4FCE1009AAE42 /* TextFormatter.swift */; };
+		EBFE6BEF28A513DF009AAE42 /* Generic .swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE6BEE28A513DF009AAE42 /* Generic .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		EBBB00E4286B0CD40099D2B0 /* ThirdTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ThirdTab.storyboard; sourceTree = "<group>"; };
 		EBFE6BEA28A3B42F009AAE42 /* BadTextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadTextFormatter.swift; sourceTree = "<group>"; };
 		EBFE6BEC28A4FCE1009AAE42 /* TextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
+		EBFE6BEE28A513DF009AAE42 /* Generic .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Generic .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				EB40810B286C9ED200A37CFE /* Extension */,
 				EB544C6A28699E610033B3C3 /* Flow */,
 				EB544C6E28699EA10033B3C3 /* Resource */,
+				EBFE6BEE28A513DF009AAE42 /* Generic .swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				EB544C0C285C5E870033B3C3 /* SecondViewController.swift in Sources */,
 				EB544C532864496F0033B3C3 /* SelectedViewController.swift in Sources */,
 				EB544BEB285B43EE0033B3C3 /* RecordSpeechViewController.swift in Sources */,
+				EBFE6BEF28A513DF009AAE42 /* Generic .swift in Sources */,
 				EB544C43286324E40033B3C3 /* TabledContentCollectionViewDelegate.swift in Sources */,
 				EB544C3D286324DF0033B3C3 /* DefaultCollectionViewDelegate.swift in Sources */,
 				EB5EBC6E2892A9940050C2D0 /* FormatDeleteDots.swift in Sources */,
