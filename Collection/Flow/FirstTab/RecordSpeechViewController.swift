@@ -29,41 +29,41 @@ class RecordSpeechViewController: UIViewController {
     }
     
     func alertFormat() {
-        let deleteSpacing = UIAlertAction(title: "Убарть пробелы",style: .default) { (action) in
-            guard self.textView.text.isEmpty else {
-                let textFormatter = FormatDeleteSpacing(onFormatDone: { formattedText in self.textView.text = formattedText })
-                textFormatter.format(text: self.textView.text)
+        let deleteSpacing = UIAlertAction(title: "Убрать пробелы", style: .default) { [weak self] (action) in
+            guard self?.textView.text.isEmpty == false else {
+                self?.nilAlert()
                 return
             }
-            self.nilAlert()
+            let textFormatter = FormatDeleteSpacing(onFormatDone: { formattedText in self?.textView.text = formattedText })
+            textFormatter.format(text: (self?.textView.text)!)
         }
-        let deleteDots = UIAlertAction(title: "Убрать точки",style: .default) { (action) in
-            guard self.textView.text.isEmpty else {
-                let textFormatter = FormatDeleteDots(onFormatDone: { formattedText in self.textView.text = formattedText })
-                textFormatter.format(text: self.textView.text)
+        let deleteDots = UIAlertAction(title: "Убрать точки",style: .default) { [weak self] (action) in
+            guard self?.textView.text.isEmpty == false else {
+                self?.nilAlert()
                 return
             }
-            self.nilAlert()
+            let textFormatter = FormatDeleteDots(onFormatDone: { formattedText in self?.textView.text = formattedText })
+            textFormatter.format(text: (self?.textView.text)!)
+
         }
-        let deletePunctuations = UIAlertAction(title: "Убрать запятые",style: .default) {(action) in
-            guard self.textView.text.isEmpty else {
-                let textFormatter = FormatDeletePunctuations(onFormatDone: { formattedText in self.textView.text = formattedText })
-                textFormatter.format(text: self.textView.text)
+        let deletePunctuations = UIAlertAction(title: "Убрать запятые",style: .default) { [weak self] (action) in
+            guard self?.textView.text.isEmpty == false else {
+                self?.nilAlert()
                 return
             }
-            self.nilAlert()
+            let textFormatter = FormatDeletePunctuations(onFormatDone: { formattedText in self?.textView.text = formattedText })
+            textFormatter.format(text: (self?.textView.text)!)
         }
-        let nilTest = UIAlertAction(title: "Отправить nil",style: .default) { (action) in
-            guard self.textView.text.isEmpty else {
-                let textFormatter = BadTextFormatter(onFormatDone: { formattedText in self.textView.text = formattedText })
-                textFormatter.format(text: self.textView.text)
+        let nilTest = UIAlertAction(title: "Отправить nil",style: .default) { [weak self] (action) in
+            guard self?.textView.text.isEmpty == false else {
+                self?.nilAlert()
                 return
             }
-            self.nilAlert()
+            let textFormatter = BadTextFormatter(onFormatDone: { formattedText in self?.textView.text = formattedText })
+            textFormatter.format(text: (self?.textView.text)!)
         }
-        let cancelAction = UIAlertAction(title: "Отмена",style: .cancel) { (action) in
-        }
-        let alert = UIAlertController(title: "Форматирование текста",message: "Выберите тип форматирования",preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel) { (action) in }
+        let alert = UIAlertController(title: "Форматирование текста", message: "Выберите тип форматирования", preferredStyle: .actionSheet)
         alert.addAction(nilTest)
         alert.addAction(deleteSpacing)
         alert.addAction(deleteDots)
