@@ -35,7 +35,7 @@ class RecordSpeechViewController: UIViewController {
                 return
             }
             let textFormatter = FormatDeleteSpacing(onFormatDone: { formattedText in self?.textView.text = formattedText })
-            if let text = self?.textView.text, text.isEmpty == false {
+            if let text = self?.textView.text, self?.textView.text != nil {
                 textFormatter.format(text: text)
             }
         }
@@ -45,7 +45,7 @@ class RecordSpeechViewController: UIViewController {
                 return
             }
             let textFormatter = FormatDeleteDots(onFormatDone: { formattedText in self?.textView.text = formattedText })
-            if let text = self?.textView.text, text.isEmpty == false {
+            if let text = self?.textView.text, self?.textView.text != nil {
                 textFormatter.format(text: text)
             }
 
@@ -56,7 +56,7 @@ class RecordSpeechViewController: UIViewController {
                 return
             }
             let textFormatter = FormatDeletePunctuations(onFormatDone: { formattedText in self?.textView.text = formattedText })
-            if let text = self?.textView.text, text.isEmpty == false {
+            if let text = self?.textView.text, self?.textView.text != nil {
                 textFormatter.format(text: text)
             }
         }
@@ -66,9 +66,10 @@ class RecordSpeechViewController: UIViewController {
                 return
             }
             let textFormatter = BadTextFormatter(onFormatDone: { formattedText in self?.textView.text = formattedText })
-            if let text = self?.textView.text, text.isEmpty == false {
+            if let text = self?.textView.text, self?.textView.text != nil {
                 textFormatter.format(text: text)
             }
+            
         }
         let cancelAction = UIAlertAction(title: "Отмена", style: .cancel) { _ in }
         let alert = UIAlertController(title: "Форматирование текста", message: "Выберите тип форматирования", preferredStyle: .actionSheet)
