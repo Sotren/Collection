@@ -21,6 +21,12 @@ class RecordSpeechViewController: UIViewController {
     var imagePicker: ImagePicker!
     let dataTimeSetUp = DateTimeHelper()
     let entity = NSEntityDescription.entity(forEntityName: "Item", in: CoreDataManager.shared.persistentContainer.viewContext)
+    
+    func count<Number: Numeric>(lhs: Number, rhs: Number) {
+        let sum = lhs + rhs
+        print("Сумма:\(sum)")
+    }
+    
     //MARK: - Alert method
     func nilAlert() {
         let alert = UIAlertController(title: "Неизвестная ошибка", message: "Произошла неизвестная ошибка, попробуйте позже", preferredStyle: UIAlertController.Style.alert)
@@ -29,50 +35,41 @@ class RecordSpeechViewController: UIViewController {
     }
     
     func alertFormat() {
-        let deleteSpacing = UIAlertAction(title: "Убрать пробелы", style: .default) { [weak self] _ in
-            guard self?.textView.text.isEmpty == false else {
-                self?.nilAlert()
+        let deleteSpacing = UIAlertAction(title: "Убарть пробелы",style: .default) { (action) in
+            guard self.textView.text.isEmpty else {
+                let textFormatter = FormatDeleteSpacing(onFormatDone: { formattedText in self.textView.text = formattedText })
+                textFormatter.format(text: self.textView.text)
                 return
             }
-            let textFormatter = FormatDeleteSpacing(onFormatDone: { formattedText in self?.textView.text = formattedText })
-            if let text = self?.textView.text, self?.textView.text != nil {
-                textFormatter.format(text: text)
-            }
+            self.nilAlert()
         }
-        let deleteDots = UIAlertAction(title: "Убрать точки", style: .default) { [weak self] _ in
-            guard self?.textView.text.isEmpty == false else {
-                self?.nilAlert()
+        let deleteDots = UIAlertAction(title: "Убрать точки",style: .default) { (action) in
+            guard self.textView.text.isEmpty else {
+                let textFormatter = FormatDeleteDots(onFormatDone: { formattedText in self.textView.text = formattedText })
+                textFormatter.format(text: self.textView.text)
                 return
             }
-            let textFormatter = FormatDeleteDots(onFormatDone: { formattedText in self?.textView.text = formattedText })
-            if let text = self?.textView.text, self?.textView.text != nil {
-                textFormatter.format(text: text)
-            }
-
+            self.nilAlert()
         }
-        let deletePunctuations = UIAlertAction(title: "Убрать запятые", style: .default) { [weak self] _ in
-            guard self?.textView.text.isEmpty == false else {
-                self?.nilAlert()
+        let deletePunctuations = UIAlertAction(title: "Убрать запятые",style: .default) {(action) in
+            guard self.textView.text.isEmpty else {
+                let textFormatter = FormatDeletePunctuations(onFormatDone: { formattedText in self.textView.text = formattedText })
+                textFormatter.format(text: self.textView.text)
                 return
             }
-            let textFormatter = FormatDeletePunctuations(onFormatDone: { formattedText in self?.textView.text = formattedText })
-            if let text = self?.textView.text, self?.textView.text != nil {
-                textFormatter.format(text: text)
-            }
+            self.nilAlert()
         }
-        let nilTest = UIAlertAction(title: "Отправить nil", style: .default) { [weak self] _ in
-            guard self?.textView.text.isEmpty == false else {
-                self?.nilAlert()
+        let nilTest = UIAlertAction(title: "Отправить nil",style: .default) { (action) in
+            guard self.textView.text.isEmpty else {
+                let textFormatter = BadTextFormatter(onFormatDone: { formattedText in self.textView.text = formattedText })
+                textFormatter.format(text: self.textView.text)
                 return
             }
-            let textFormatter = BadTextFormatter(onFormatDone: { formattedText in self?.textView.text = formattedText })
-            if let text = self?.textView.text, self?.textView.text != nil {
-                textFormatter.format(text: text)
-            }
-            
+            self.nilAlert()
         }
-        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel) { _ in }
-        let alert = UIAlertController(title: "Форматирование текста", message: "Выберите тип форматирования", preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Отмена",style: .cancel) { (action) in
+        }
+        let alert = UIAlertController(title: "Форматирование текста",message: "Выберите тип форматирования",preferredStyle: .actionSheet)
         alert.addAction(nilTest)
         alert.addAction(deleteSpacing)
         alert.addAction(deleteDots)
@@ -83,6 +80,7 @@ class RecordSpeechViewController: UIViewController {
     
     @IBAction func formatTextButtonPressed(_ sender: UIButton) {
         alertFormat()
+        count(lhs: 1, rhs: 2)
     }
     //MARK: - Save to core data
     func setUpSave () {
