@@ -9,17 +9,25 @@ import Foundation
 
 extension String {
     
-    func deleteSpacing(trimText: String) -> String  {
+    func deleteSpacing(trimText: String) -> String?  {
+        if trimText.isEmpty {
+            return nil
+        }
         return trimText.filter({$0 != " "})
-        
+
     }
     
-    func deleteDots(trimText: String) -> String  {
-       return trimText.filter({$0 != "."})
-       
+    func deleteDots(trimText: String) -> String?  {
+        if trimText.isEmpty {
+            return nil
+        }
+        return trimText.filter({$0 != "."})
     }
     
-    func deletePunctuations(trimText: String) -> String  {
-         return trimText.filter({$0 != ","})
+    func deletePunctuations(trimText: String) -> String?  {
+        if trimText.isEmpty {
+            return nil
+        }
+        return trimText.filter({$0 != ","})
     }
 }
